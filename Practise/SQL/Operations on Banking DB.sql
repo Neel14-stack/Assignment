@@ -88,3 +88,7 @@ SELECT DISTINCT(martial) as marital_status from banking;
 SELECT COUNT(*) AS success_customer FROM banking WHERE poutcome LIKE 's%';
 
 SELECT COUNT(*) AS edu_6 FROM banking WHERE education LIKE '%6y';
+
+-- Group BY
+-- MYSQL evaluates GROUP BY vlause after FROM AND WHERE and BEFORE HAVING, SELECT, DISTINCT, ORDER BY and LIMIT
+-- FROM WHERE GROUPBY HAVING SELECT DISTINCT ORDER BY LIMIT
