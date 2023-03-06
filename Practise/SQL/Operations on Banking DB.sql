@@ -80,3 +80,9 @@ ORDER BY month_contact DESC, duration ASC;
 -- TO DROP DUPLICATE SET FROM RESULT SET
 -- MYSQL evaluated DISTINCT clause after FROM, WHERE AND SELECT AND BEFORE ORDER BY CLAUSE
 SELECT DISTINCT(education) as education from banking;
+
+SELECT DISTINCT(martial) as marital_status from banking;
+
+-- LIKE OPERATOR - IS A LOGICAL OPERATOR THAT TESTS WHETHER A STRING 
+-- CONTAINS SPECIFIED PATTERN OR NOT 
+SELECT COUNT(*) AS success_customer FROM banking WHERE poutcome LIKE 's%';
