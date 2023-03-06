@@ -157,4 +157,18 @@ select avg(duration)/3600 from banking;
 
 -- select count(martial) from banking where age > (select avg(age) from banking);
 
-select count(y) as success_count from banking where (select sum(duration) from banking) > (select avg(duration) from banking);
+select sum(y) as success_count from banking where duration > (select avg(duration) from banking);
+
+-- FROM CLAUSE IN SUBQUERY
+-- SELECT * FROM (SUBQUERY)
+
+-- When you use subquery in the FROM Clause, the resutl set returned from a subquery from a subquery will be used as temporary table.
+
+-- write a query to show weekly MAX, MIN, MEAN Success Status 
+-- select max(day_of_week) as mx, min(day_of_week) as mn, avg(day_of_week) as ag from banking;
+select * from (select max(day_of_week), min(day_of_week), avg(day_of_week) from banking where y = 1) as temp;
+
+select sum(y) as weekly,day_of_week from banking group by day_of_week;
+
+select max(weekly) as max_val,min(weekly) as min_val,avg(weekly) as avg_val from
+(select day_of_week, sum(y) as weekly from banking group by day_of_week) as derived_table;
