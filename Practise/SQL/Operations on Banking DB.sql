@@ -111,8 +111,11 @@ group by month_contact;
 SELECT month_contact, sum(y) as ordercount, sum(duration)/3600 as total_duration_hours from banking where y =1
 group by month_contact;
 
-SELECT month_contact, sum(y) as ordercount, sum(duration)/3600 as total_duration_hours from banking
+-- USE HAVING CLAUSE ON GROUP BY RESULT SET
+SELECT month_contact, sum(y) as ordercount, sum(duration)/3600 as total_duration_hours from banking 
 group by month_contact
 HAVING ordercount > 20 and month_contact like 'a%';
 
-
+-- ROLL UP
+-- ROLLUP generates multiple grouping sets based on cloumns or expression specified in group by clause
+-- ROLLUP clause generates not only the subtotals but 
