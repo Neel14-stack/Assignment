@@ -86,3 +86,5 @@ SELECT DISTINCT(martial) as marital_status from banking;
 -- LIKE OPERATOR - IS A LOGICAL OPERATOR THAT TESTS WHETHER A STRING 
 -- CONTAINS SPECIFIED PATTERN OR NOT 
 SELECT COUNT(*) AS success_customer FROM banking WHERE poutcome LIKE 's%';
+
+SELECT COUNT(*) AS edu_6 FROM banking WHERE education LIKE '%6y';
