@@ -91,4 +91,13 @@ SELECT COUNT(*) AS edu_6 FROM banking WHERE education LIKE '%6y';
 
 -- Group BY
 -- MYSQL evaluates GROUP BY vlause after FROM AND WHERE and BEFORE HAVING, SELECT, DISTINCT, ORDER BY and LIMIT
--- FROM WHERE GROUPBY HAVING SELECT DISTINCT ORDER BY LIMIT
+-- FROM > WHERE > GROUPBY > HAVING > SELECT > DISTINCT > ORDERBY > LIMIT
+
+-- Total customers contact in each month
+SELECT month_contact, count(*) as target_customer from banking group by month_contact;
+
+-- total target customer contaccct every week for each month
+select month_contact, day_of_week, count(*) as target_customer from banking group by month_contact, day_of_week;
+
+-- show the duration of call in hours for each weekday in each month
+select sum(duration)/3600 as duration_hour, day_of_week, month_contact  from banking group by month_contact, day_of_week;
