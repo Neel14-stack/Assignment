@@ -116,7 +116,7 @@ SELECT month_contact, sum(y) as ordercount, sum(duration)/3600 as total_duration
 group by month_contact
 HAVING ordercount > 20 and month_contact like 'a%';
 
--- ROLL UP
+-- 14. ROLL UP
 -- ROLLUP generates multiple grouping sets based on cloumns or expression specified in group by clause
 -- ROLLUP clause generates not only the subtotals but the grand total of columns order clause.
 -- The ROLLUP assumes that there is following hierarchy : c1 > c2 > c3
@@ -146,3 +146,15 @@ group by job, martial, day_of_week with rollup
 order by job desc;
 
 -- 1. Eact set of day_of_week rows for a given job and martial status generates an extra aggregated summary
+-- 
+
+-- 15. SUBQUERY
+-- A Mysql query is query nested within another query
+-- such as SELECT, INSERT, UPDATE or DELETE.
+-- SUBQUERY can be nested within another subquery.
+select sum(duration)/3600 from banking;
+select avg(duration)/3600 from banking;
+
+-- select count(martial) from banking where age > (select avg(age) from banking);
+
+select count(y) as success_count from banking where (select sum(duration) from banking) > (select avg(duration) from banking);
