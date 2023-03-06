@@ -172,3 +172,12 @@ select sum(y) as weekly,day_of_week from banking group by day_of_week;
 
 select max(weekly) as max_val,min(weekly) as min_val,avg(weekly) as avg_val from
 (select day_of_week, sum(y) as weekly from banking group by day_of_week) as derived_table;
+
+-- 16. UPDATE
+ALTER TABLE banking ADD COLUMN age_group varchar(20);
+SET SQL_SAFE_UPDATES = 0;
+UPDATE banking
+SET age_group = if(age<=25,'<25',
+if (age>40,'40+','25-40'));
+
+select age_group, sum(y) as emp_num from banking group by age_group;
