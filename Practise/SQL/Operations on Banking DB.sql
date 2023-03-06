@@ -100,4 +100,6 @@ SELECT month_contact, count(*) as target_customer from banking group by month_co
 select month_contact, day_of_week, count(*) as target_customer from banking group by month_contact, day_of_week;
 
 -- show the duration of call in hours for each weekday in each month
-select sum(duration)/3600 as duration_hour, day_of_week, month_contact  from banking group by month_contact, day_of_week;
+select sum(duration)/3600 as duration_hour, day_of_week, month_contact  from banking group by month_contact, day_of_week order by month_contact;
+
+
