@@ -118,4 +118,31 @@ HAVING ordercount > 20 and month_contact like 'a%';
 
 -- ROLL UP
 -- ROLLUP generates multiple grouping sets based on cloumns or expression specified in group by clause
--- ROLLUP clause generates not only the subtotals but 
+-- ROLLUP clause generates not only the subtotals but the grand total of columns order clause.
+-- The ROLLUP assumes that there is following hierarchy : c1 > c2 > c3
+-- It generates grouping sets : (c1,c2,c3), (c1,c2), (c1), ()
+
+SELECT job, sum(y) as sucess_count from banking
+GROUP BY job WITH ROLLUP ORDER BY sucess_count;
+
+SELECT martial, sum(y) as sucess_count from banking
+GROUP BY martial WITH ROLLUP ORDER BY sucess_count;
+
+SELECT job, day_of_week, sum(y) as sucess_count from banking 
+GROUP BY job, day_of_week WITH ROLLUP having day_of_week = null ORDER BY job;
+
+
+SELECT job, day_of_week, sum(y) as sucess_count from banking
+GROUP BY job, day_of_week WITH ROLLUP
+having job like 'm%' and day_of_week is null;
+
+SELECT job, day_of_week, sum(y) as sucess_count from banking
+GROUP BY job, day_of_week WITH ROLLUP
+having day_of_week is null;
+
+select job, martial, day_of_week, count(y) as success_count
+from banking where y>0
+group by job, martial, day_of_week with rollup
+order by job desc;
+
+-- 1. Eact set of day_of_week rows for a given job and martial status generates an extra aggregated summary
