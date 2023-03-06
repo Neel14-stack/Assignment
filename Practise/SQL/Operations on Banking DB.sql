@@ -105,6 +105,14 @@ select sum(duration)/3600 as duration_hour, day_of_week, month_contact  from ban
 -- 13. HAVING
 -- MYSQL evaluates having vlause after FROM, WHERE, GROUPBY,
 -- BEFORE SELECT DISTINCT ORDERBY LIMIT
-SELECT month_contact, sum(y) as ordercount, sum(duration)/3600 as total_duration_hours from banking group by month_contact;
+SELECT month_contact, sum(y) as ordercount, sum(duration)/3600 as total_duration_hours from banking
+group by month_contact;
+
+SELECT month_contact, sum(y) as ordercount, sum(duration)/3600 as total_duration_hours from banking where y =1
+group by month_contact;
+
+SELECT month_contact, sum(y) as ordercount, sum(duration)/3600 as total_duration_hours from banking
+group by month_contact
+HAVING ordercount > 20 and month_contact like 'a%';
 
 
