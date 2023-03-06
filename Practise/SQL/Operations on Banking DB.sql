@@ -66,7 +66,7 @@ SELECT count(*) as positive_customers from banking where y=1;
 -- SHOW ONLY NOT NULL VALUES FROM EUCATION
 SELECT education, duration from banking where y=1 and education is not null;
 
--- ORDER BY
+-- 9. ORDER BY
 -- TO SORT IN THE RESULT SET, YOU ADD ORDER BY CLAUSE TO SELECT STATEMENT
 -- ORDER BY ASC, DESC
 SELECT age, month_contact, duration from banking where y=1
@@ -76,20 +76,20 @@ ORDER BY month_contact;
 SELECT age, month_contact, duration from banking where y=1
 ORDER BY month_contact DESC, duration ASC;
 
--- DISTINCT - USE TO SHOW UNIQUE VALUES FROM EACH COLUMN
+-- 10. DISTINCT - USE TO SHOW UNIQUE VALUES FROM EACH COLUMN
 -- TO DROP DUPLICATE SET FROM RESULT SET
 -- MYSQL evaluated DISTINCT clause after FROM, WHERE AND SELECT AND BEFORE ORDER BY CLAUSE
 SELECT DISTINCT(education) as education from banking;
 
 SELECT DISTINCT(martial) as marital_status from banking;
 
--- LIKE OPERATOR - IS A LOGICAL OPERATOR THAT TESTS WHETHER A STRING 
+-- 11. LIKE OPERATOR - IS A LOGICAL OPERATOR THAT TESTS WHETHER A STRING 
 -- CONTAINS SPECIFIED PATTERN OR NOT 
 SELECT COUNT(*) AS success_customer FROM banking WHERE poutcome LIKE 's%';
 
 SELECT COUNT(*) AS edu_6 FROM banking WHERE education LIKE '%6y';
 
--- Group BY
+-- 12. Group BY
 -- MYSQL evaluates GROUP BY vlause after FROM AND WHERE and BEFORE HAVING, SELECT, DISTINCT, ORDER BY and LIMIT
 -- FROM > WHERE > GROUPBY > HAVING > SELECT > DISTINCT > ORDERBY > LIMIT
 
@@ -101,5 +101,10 @@ select month_contact, day_of_week, count(*) as target_customer from banking grou
 
 -- show the duration of call in hours for each weekday in each month
 select sum(duration)/3600 as duration_hour, day_of_week, month_contact  from banking group by month_contact, day_of_week order by month_contact;
+
+-- 13. HAVING
+-- MYSQL evaluates having vlause after FROM, WHERE, GROUPBY,
+-- BEFORE SELECT DISTINCT ORDERBY LIMIT
+SELECT month_contact
 
 
