@@ -93,3 +93,19 @@ UPDATE stocks
 SET stock_trend = if(spy+gld+amzn+goog+kpit+mpc >0,'uptrend','downtrend');
 
 select * from stocks limit 5;
+
+select stock_trend, count(*) from stocks group by stock_trend;
+
+-- aggregate operation with case statement
+select 
+	case
+		when weekday(TradeDate) = 0 then 'monday'
+        when weekday(TradeDate) = 1 then 'tuesday'
+        when weekday(TradeDate) = 2 then 'wednesday'
+        when weekday(TradeDate) = 3 then 'thrusday'
+        when weekday(TradeDate) = 4 then 'friday'
+        when weekday(TradeDate) = 5 then 'saturday'
+        when weekday(TradeDate) = 6 then 'sunday'
+	END AS weekdays, round(avg(spy),4),round(avg(gld),4),round(avg(amzn),4),round(avg(goog),4),round(avg(gild),4),
+    round(avg(kpit),4),round(avg(mpc),4)
+		FROM stocks group by weekdays order by weekdays;
