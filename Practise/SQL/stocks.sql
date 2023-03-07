@@ -21,3 +21,13 @@ ALTER TABLE stocks MODIFY TradeDate date;
 
 DESCRIBE stocks;
 select * from stocks;
+
+ALTER TABLE stocks DROP COLUMN spytrends;
+ALTER TABLE stocks ADD COLUMN spytrends varchar(20);
+SET SQL_SAFE_UPDATES = 0;	
+UPDATE stocks
+SET spytrends = if(spy > 0, 'positive',
+if(spy < 0,'negative','zero'));
+
+select spytrends from stocks;
+
