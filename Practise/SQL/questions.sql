@@ -8,7 +8,8 @@ DESC hr_employee;
 
 -- select  from hr_employee;
 -- 3. Show the count of Employee & percentage Workforce in each Department
-SELECT COUNT(*) AS Employee, Department FROM hr_employee GROUP BY Department;
+SELECT COUNT(*) AS Employee, (count(Department)/max(EmployeeID)*100) as emp_pecentage,  Department FROM 
+hr_employee GROUP BY Department;
 
 -- select count(gender) from hr_employee;
 -- 4.	Which gender have higher strength as workforce in each department?
@@ -31,7 +32,7 @@ SELECT COUNT(*), BusinessTravel from hr_employee where BusinessTravel like '%Fre
 
 -- 10.	Show the Department with Highest Attrition Rate (Percentage)
 select count(Attrition) from hr_employee;
-SELECT COUNT(Attrition) AS Total_Attrition, SUM(Total_Attrition) AS SUM_Attrition, Department FROM hr_employee where Attrition = 'Yes' GROUP BY Department;
+SELECT COUNT(Attrition) AS Total_Attrition, Department FROM hr_employee where Attrition = 'Yes' GROUP BY Department;
 
 select department,
 case
