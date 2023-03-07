@@ -31,3 +31,6 @@ if(spy < 0,'negative','zero'));
 
 select spytrends from stocks;
 
+select AVG(AMZN), IF (AMZN >=0, 'UPTREND','DOWNTREND') AS direction FROM stocks GROUP BY direction;
+
+-- CASE WHEN THEN
