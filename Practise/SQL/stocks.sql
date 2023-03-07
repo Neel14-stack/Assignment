@@ -33,4 +33,38 @@ select spytrends from stocks;
 
 select AVG(AMZN), IF (AMZN >=0, 'UPTREND','DOWNTREND') AS direction FROM stocks GROUP BY direction;
 
+ALTER TABLE stocks DROP COLUMN weekday;
+
+ALTER TABLE stocks ADD COLUMN weekday varchar(20);
+
+-- UPDATE stocks
+-- SET weekday = if(weekday(TradeDate) = 0,'monday',
+-- if(weekday(TradeDate) = 1,'tuesday',
+-- if(weekday(TradeDate) = 2,'wednesday','sunday')));
+
+UPDATE stocks
+SET weekday = case
+		when weekday(TradeDate) = 0 then 'monday'
+        when weekday(TradeDate) = 1 then 'tuesday'
+        when weekday(TradeDate) = 2 then 'wednesday'
+        when weekday(TradeDate) = 3 then 'thrusday'
+        when weekday(TradeDate) = 4 then 'friday'
+        when weekday(TradeDate) = 5 then 'saturday'
+        when weekday(TradeDate) = 6 then 'sunday'
+        END ;
+
+select * from stocks limit 5;
+
+select *, weekday(TradeDate) as weekday from stocks;
 -- CASE WHEN THEN
+select *,
+	case
+		when weekday(TradeDate) = 0 then 'monday'
+        when weekday(TradeDate) = 1 then 'tuesday'
+        when weekday(TradeDate) = 2 then 'wednesday'
+        when weekday(TradeDate) = 3 then 'thrusday'
+        when weekday(TradeDate) = 4 then 'friday'
+        when weekday(TradeDate) = 5 then 'saturday'
+        when weekday(TradeDate) = 6 then 'sunday'
+	END AS weekday
+		FROM stocks;
