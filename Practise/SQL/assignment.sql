@@ -1,6 +1,7 @@
 drop table tek_employee;
 create table if not exists tek_employee (empid varchar(20), empname varchar(20), salary varchar(10),
 department_id varchar(20),manager_id varchar(20));
+use joins;
 
 insert into tek_employee value('e1','neel','15000','d1','m1');
 insert into tek_employee value('e2','kamal','25000','d2','m2');
@@ -49,13 +50,14 @@ union
 select tek.empname, dept.deptname from tek_employee tek right outer join department dept on 
 (tek.department_id = dept.deptid);
 
-
+-- Fetch details of all employee, their manager, their department, and the projects they work on.
 select tek.empname, mg.managername, dept.deptname, pj.projectname from tek_employee tek left outer join manager mg
- on (tek.manager_id = mg.managerid) join department dept on (tek.department_id = dept.deptid) join project pj
- on (tek.empid = pj.teamid);
+ on (tek.manager_id = mg.managerid) left outer join department dept on (tek.department_id = dept.deptid)
+ left outer join project pj  on (tek.empid = pj.teamid);
 
 -- select tek.empname, mg.managername, dept.deptname,pj.projectname from tek_employee tek left outer join manager mg 
 -- on (tek.manager_id = mg.managerid) join project pj on (tek.empid = pj.teamid) join department dept on
 --  (tek.department_id = dept.deptid);
  
+ -- fetch details of only employee, their manager, their department and the projects they work on
  
