@@ -48,3 +48,14 @@ on (tek.department_id = dept.deptid)
 union
 select tek.empname, dept.deptname from tek_employee tek right outer join department dept on 
 (tek.department_id = dept.deptid);
+
+
+select tek.empname, mg.managername, dept.deptname, pj.projectname from tek_employee tek left outer join manager mg
+ on (tek.manager_id = mg.managerid) join department dept on (tek.department_id = dept.deptid) join project pj
+ on (tek.empid = pj.teamid);
+
+select tek.empname, mg.managername, dept.deptname,pj.projectname from tek_employee tek left outer join manager mg 
+on (tek.manager_id = mg.managerid) join project pj on (tek.empid = pj.teamid) join department dept on
+ (tek.department_id = dept.deptid);
+ 
+ 
