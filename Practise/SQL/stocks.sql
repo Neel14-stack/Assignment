@@ -53,6 +53,19 @@ SET weekday = case
         when weekday(TradeDate) = 6 then 'sunday'
         END ;
 
+-- alternative method
+
+-- UPDATE stocks
+-- SET weekday = case
+-- 		when weekday(TradeDate) = 0 then 'monday'
+--         when  = 1 then 'tuesday'
+--         when  = 2 then 'wednesday'
+--         when = 3 then 'thrusday'
+--         when  = 4 then 'friday'
+--         when  = 5 then 'saturday'
+--         when  = 6 then 'sunday'
+--         END ;
+
 select * from stocks limit 5;
 
 select *, weekday(TradeDate) as weekday from stocks;
@@ -68,3 +81,15 @@ select *,
         when weekday(TradeDate) = 6 then 'sunday'
 	END AS weekday
 		FROM stocks;
+        
+        
+select sum(sum(spy)+sum(gld)+sum(amzn)+sum(goog)+sum(kpit)+sum(gild)+sum(mpc)), weekday as stock_trend from stocks group by weekday;
+
+select concat(spy+gld+amzn+goog+kpit+mpc) as stock_trend from stocks;
+
+ALTER TABLE stocks DROP COLUMN stock_trend;
+ALTER TABLE stocks ADD COLUMN stock_trend varchar(20);
+UPDATE stocks
+SET stock_trend = if(spy+gld+amzn+goog+kpit+mpc >0,'uptrend','downtrend');
+
+select * from stocks limit 5;
