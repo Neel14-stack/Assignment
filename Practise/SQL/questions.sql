@@ -47,5 +47,16 @@ from hr_employee) as t
 group by Department order by attrition_percentage desc limit 1
 ;
 
+-- 11.	Show the Job Role with Highest Attrition Rate (Percentage)
+select sum(attrition01)/count(attrition01) as attrition_percentage,JobRole from (
+select JobRole,
+case
+	when attrition = "Yes" then 1
+    else 0
+end as attrition01
+from hr_employee) as t
+group by JobRole; -- order by attrition_percentage desc limit 1
+
+
 -- 13.	Find the Attrition Rate for Marital Status.
 SELECT COUNT(Attrition) AS Attrition_Rate, MaritalStatus FROM hr_employee WHERE Attrition = 'Yes' GROUP BY MaritalStatus;
