@@ -1,4 +1,5 @@
 CREATE DATABASE IF NOT EXISTS Employee;
+<<<<<<< HEAD
 use bankingdb;
 
 SELECT * FROM hr_employee LIMIT 5;
@@ -33,6 +34,8 @@ SELECT COUNT(Attrition) AS Total_Attrition, Department FROM hr_employee where At
 -- 13.	Find the Attrition Rate for Marital Status.
 SELECT COUNT(Attrition) AS Attrition_Rate, MaritalStatus FROM hr_employee WHERE Attrition = 'Yes' GROUP BY MaritalStatus;
 CREATE DATABASE IF NOT EXISTS Employee;
+=======
+>>>>>>> c19dfb559bde75b4861840c23a8d73905913ccca
 use Employee;
 
 SELECT * FROM hr_employee LIMIT 5;
@@ -64,6 +67,7 @@ SELECT COUNT(*), BusinessTravel from hr_employee where BusinessTravel like '%Fre
 select count(Attrition) from hr_employee;
 SELECT COUNT(Attrition) AS Total_Attrition, SUM(Total_Attrition) AS SUM_Attrition, Department FROM hr_employee where Attrition = 'Yes' GROUP BY Department;
 
+<<<<<<< HEAD
 select department,
 case
 	when attrition = "Yes" then 1
@@ -83,3 +87,8 @@ group by Department order by attrition_percentage desc limit 1
 
 -- 13.	Find the Attrition Rate for Marital Status.
 SELECT COUNT(Attrition) AS Attrition_Rate, MaritalStatus FROM hr_employee WHERE Attrition = 'Yes' GROUP BY MaritalStatus;
+=======
+-- 13.	Find the Attrition Rate for Marital Status.
+SELECT COUNT(Attrition) AS Attrition_Rate, MaritalStatus FROM hr_employee WHERE Attrition = 'Yes' GROUP BY MaritalStatus;
+
+>>>>>>> c19dfb559bde75b4861840c23a8d73905913ccca
