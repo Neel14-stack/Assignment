@@ -175,9 +175,10 @@ select max(weekly) as max_val,min(weekly) as min_val,avg(weekly) as avg_val from
 
 -- 16. UPDATE
 ALTER TABLE banking ADD COLUMN age_group varchar(20);
-SET SQL_SAFE_UPDATES = 0;
+SET SQL_SAFE_UPDATES = 0;	
 UPDATE banking
 SET age_group = if(age<=25,'<25',
 if (age>40,'40+','25-40'));
 
 select age_group, sum(y) as emp_num from banking group by age_group;
+select age_group, sum(y)
