@@ -17,6 +17,9 @@ SELECT count(*), Department, gender FROM hr_employee GROUP BY Department, gender
 -- 5.	Show the workforce in each Job Role
 SELECT COUNT(*) AS WorkForce, JobRole FROM hr_employee GROUP BY JobRole;
 
+-- 6.
+select age,count(*) as age_group from hr_employee group by age order by age;
+
 -- 7.	Compare all marital status of employee and find the most frequent marital status.
 SELECT MAX(Freq_MS) AS Most_Freq_MS FROM (SELECT COUNT(*) AS Freq_MS, MaritalStatus FROM hr_employee GROUP BY MaritalStatus) AS derived_table;
 
@@ -60,3 +63,38 @@ group by JobRole; -- order by attrition_percentage desc limit 1
 
 -- 13.	Find the Attrition Rate for Marital Status.
 SELECT COUNT(Attrition) AS Attrition_Rate, MaritalStatus FROM hr_employee WHERE Attrition = 'Yes' GROUP BY MaritalStatus;
+
+-- 14.	Find the Attrition Count & Percentage for Different Education Levels
+select sum(attrition_temp)/count(attrition_temp) as attrition_percentage, count(attrition_temp) as attrition_count, education from
+(select education,
+case 
+	when attrition = 'yes' then 1
+    else 0
+end as attrition_temp
+from hr_employee) as derived_table group by education;
+
+-- 15.	Find the Attrition & Percentage Attrition for Business Travel.
+select sum(attrition_temp)/count(attrition_temp) as attrition_percentage, count(attrition_temp) as attrition_count,
+ BusinessTravel from
+(select BusinessTravel,
+case 
+	when attrition = 'yes' then 1
+    else 0
+end as attrition_temp
+from hr_employee) as derived_table group by BusinessTravel;
+
+-- 16.	Find the Attrition & Percentage Attrition for Various JobInvolvement
+select sum(attrition_temp)/count(attrition_temp) as attrition_percentage, count(attrition_temp) as attrition_count,
+ JobInvolvement from
+(select JobInvolvement,
+case 
+	when attrition = 'yes' then 1
+    else 0
+end as attrition_temp
+from hr_employee) as derived_table group by JobInvolvement;
+
+-- 17.	Show Attrition Rate for Different JobSatisfaction.
+select count(attrition) as attrition_rate, JobSatisfaction from hr_employee where attrition = 'yes'
+ group by JobSatisfaction;
+ 
+ 
