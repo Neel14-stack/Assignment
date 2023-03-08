@@ -25,4 +25,23 @@ select id,expanse from expense;
  partition p3 values less than (maxvalue));
  
  desc part_employee;
+ 
+ select * from part_employee;
+ 
+ select partition_name, table_rows from information_schema.PARTITIONS 
+ WHERE table_schema = 'joins' AND
+ table_name = 'part_employee';
+ 
+ -- Drop a specific partition from table
+ ALTER TABLE part_employee TRUNCATE PARTITION P2;
 
+-- PARTITION BY LIST
+-- PRODUCT ID (101,102,106)
+-- PRODUCT ID (103,105,108)
+-- PRODUCT ID (104,107,109)
+
+create table part_products (product_id int, product_name varchar(20), store_name varchar(50), prince int)
+partition by list(product_id)
+(partition p0 values in (101,102,106),
+partition p1 values in (103, 105,108),
+partition p2 values in (104, 107,109));
