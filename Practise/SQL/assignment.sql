@@ -114,6 +114,8 @@ select tek.empname, dept.deptname, cmp.companyname, cmp.location from tek_employ
  natural join project pj; -- in this case it works like a cross join
  
  -- SELF JOIN
+ -- It joins a table with itself using either INNER JOIN or LEFT JOIN
+ -- Self join can also be done with WHERE Clause
  select * from tek_employee;
  select tek1.empname, tek2.salary from tek_employee tek1, tek_employee tek2 
- where tek1.salary = tek2.salary;
+ where tek1.salary != tek2.salary;
