@@ -46,6 +46,7 @@ partition by list(product_id)
 partition p1 values in (103, 105,108),
 partition p2 values in (104, 107,109));
 
+select * from part_products;
 -- Partition by HASH values
 -- Partiitoning table is used to distribute according to some predefined number of partitions.
 -- Distribute data into table evenly
@@ -56,3 +57,14 @@ partition p2 values in (104, 107,109));
 -- (schema of table)
 -- partition by hash value(column_name)
 -- partition 4;
+
+select * from employee_part limit 5;
+drop table if exists country_partition;
+create table country_partition(empid int, first_name text, last_name text, gender text, city text,
+country varchar(20))
+partition by key(country)
+partitions 6;
+
+ select partition_name, table_rows from information_schema.PARTITIONS 
+ WHERE table_schema = 'joins' AND
+ table_name = 'country_partition';
