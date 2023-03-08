@@ -13,6 +13,16 @@ select id,expanse from expense;
 
 -- Partition in MYsql
 -- Syntax
--- CREATE TABLE table_name PARTITION BY RANGE COLUMNS(column_list) PARTITION part_name1 VALUES LESS THAN (val_list),
--- PARTITION part_name2 VALUES LESS THAN (val_list);
+ CREATE TABLE table_name PARTITION BY RANGE COLUMNS(column_list) (PARTITION part_name1 VALUES LESS THAN (val_list),
+ PARTITION part_name2 VALUES LESS THAN (val_list));
+ 
+ drop table if exists part_employee;
+ create table part_employee (empi int, ename varchar(20), age int, address text, salary int)
+ partition by range columns (salary)
+ (partition p0 values less than (30000),
+ partition p1 values less than (50000),
+ partition p2 values less than (70000),
+ partition p3 values less than (maxvalue));
+ 
+ desc part_employee;
 
