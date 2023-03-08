@@ -95,4 +95,11 @@ join project pj  on (tek.empid = pj.teamid) right outer join manager mg
 -- write a query to fetch all employee name and their corresponding department name. also make sure to display 
 -- the company name and company location corresponding to each employee
 
-create table company(comapanyid int, companyname varchar(50), location varchar(50));
+drop table if exists company;
+create table company(comapanyid varchar(10), companyname varchar(50), location varchar(50));
+
+insert into company value('c1','teksystem','hyderabad');
+select * from company;
+
+select tek.empname, dept.deptname, cmp.companyname, cmp.location from tek_employee tek join department dept on
+ (tek.department_id = dept.deptid) cross join company cmp;
