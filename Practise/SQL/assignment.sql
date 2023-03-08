@@ -108,3 +108,8 @@ select tek.empname, dept.deptname, cmp.companyname, cmp.location from tek_employ
  -- Natural join is similar to inner join without condition
  -- Natural join between tables with no common column names then it will do cross join
  select tek.empname, dept.deptname from tek_employee tek natural join department dept;
+ 
+ select tek.empname, pj.projectname, pj.teamid, pj.teamid
+ from tek_employee tek
+ natural join project pj; -- in this case it works like a cross join
+ 
