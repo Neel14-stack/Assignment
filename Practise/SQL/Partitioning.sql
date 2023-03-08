@@ -10,3 +10,9 @@ select id from employee union select id from expense;
 -- select multiple fields from both tables
 select id, name from employee union all 
 select id,expanse from expense;
+
+-- Partition in MYsql
+-- Syntax
+-- CREATE TABLE table_name PARTITION BY RANGE COLUMNS(column_list) PARTITION part_name1 VALUES LESS THAN (val_list),
+-- PARTITION part_name2 VALUES LESS THAN (val_list);
+
