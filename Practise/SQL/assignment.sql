@@ -85,4 +85,7 @@ join project pj  on (tek.empid = pj.teamid) right outer join manager mg
  -- table with the row in the seocnd table
  -- Return cartesian product
  select * from employee;
+ select * from department;
+ 
+ select emp.name, dept.deptname from employee emp cross join department dept;
  -- 
