@@ -105,4 +105,6 @@ select tek.empname, dept.deptname, cmp.companyname, cmp.location from tek_employ
  (tek.department_id = dept.deptid) cross join company cmp;
  
  -- NATURAL JOIN
+ -- Natural join is similar to inner join without condition
+ -- Natural join between tables with no common column names then it will do cross join
  select tek.empname, dept.deptname from tek_employee tek natural join department dept;
