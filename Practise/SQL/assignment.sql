@@ -91,3 +91,8 @@ join project pj  on (tek.empid = pj.teamid) right outer join manager mg
  from tek_employee tek -- 5 
  cross join department dept; -- 4
 -- total result would be of 5*4 = 20 entries 
+
+-- write a query to fetch all employee name and their corresponding department name. also make sure to display 
+-- the company name and company location corresponding to each employee
+
+create table company(comapanyid int, companyname varchar(50), location varchar(50));
