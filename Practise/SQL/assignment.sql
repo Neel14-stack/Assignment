@@ -103,3 +103,6 @@ select * from company;
 
 select tek.empname, dept.deptname, cmp.companyname, cmp.location from tek_employee tek join department dept on
  (tek.department_id = dept.deptid) cross join company cmp;
+ 
+ -- NATURAL JOIN
+ select tek.empname, dept.deptname from tek_employee tek natural join department dept;
