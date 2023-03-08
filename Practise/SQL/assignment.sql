@@ -113,3 +113,6 @@ select tek.empname, dept.deptname, cmp.companyname, cmp.location from tek_employ
  from tek_employee tek
  natural join project pj; -- in this case it works like a cross join
  
+ -- SELF JOIN
+ select * from tek_employee;
+ select tek.empname, tek.salary from tek_employee tek 
