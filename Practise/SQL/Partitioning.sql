@@ -45,3 +45,14 @@ partition by list(product_id)
 (partition p0 values in (101,102,106),
 partition p1 values in (103, 105,108),
 partition p2 values in (104, 107,109));
+
+-- Partition by HASH values
+-- Partiitoning table is used to distribute according to some predefined number of partitions.
+-- Distribute data into table evenly
+-- HASH(column) PARTITIONS 4;
+
+-- SYNTAX
+-- create table partition_table
+-- (schema of table)
+-- partition by hash value(column_name)
+-- partition 4;
