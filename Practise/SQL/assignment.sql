@@ -84,8 +84,10 @@ join project pj  on (tek.empid = pj.teamid) right outer join manager mg
  -- Result set will include all rows from both tables, where each row is the combination of the row in the first 
  -- table with the row in the seocnd table
  -- Return cartesian product
- select * from employee;
+ select * from tek_employee; 
  select * from department;
  
- select emp.name, dept.deptname from employee emp cross join department dept;
- -- 
+ select tek.empname, dept.deptname 
+ from tek_employee tek -- 5 
+ cross join department dept; -- 4
+-- total result would be of 5*4 = 20 entries 
