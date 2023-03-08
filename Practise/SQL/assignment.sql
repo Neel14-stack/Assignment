@@ -50,14 +50,32 @@ union
 select tek.empname, dept.deptname from tek_employee tek right outer join department dept on 
 (tek.department_id = dept.deptid);
 
+-- select tek.empname, pj.projectname from tek_employee tek join project pj on (tek.empid = pj.teamid)
+-- union
+-- select dept.deptname, mg.managername from manager mg on (mg.
+
 -- Fetch details of all employee, their manager, their department, and the projects they work on.
 select tek.empname, mg.managername, dept.deptname, pj.projectname from tek_employee tek left outer join manager mg
  on (tek.manager_id = mg.managerid) left outer join department dept on (tek.department_id = dept.deptid)
  left outer join project pj  on (tek.empid = pj.teamid);
 
--- select tek.empname, mg.managername, dept.deptname,pj.projectname from tek_employee tek left outer join manager mg 
--- on (tek.manager_id = mg.managerid) join project pj on (tek.empid = pj.teamid) join department dept on
---  (tek.department_id = dept.deptid);
+select tek.empname, mg.managername, dept.deptname,pj.projectname from tek_employee tek join manager mg 
+on (tek.manager_id = mg.managerid) join project pj on (tek.empid = pj.teamid) join department dept on
+(tek.department_id = dept.deptid);
  
  -- fetch details of only employee, their manager, their department and the projects they work on
  
+ -- select tek.empname, mg.managername, dept.deptname, pj.projectname from tek_employee tek left outer join 
+--  manager mg on (tek.manager_id = mg.manager_id)  join department dept on (tek.department_id = dept.deptid) 
+--  join project pj on (tek.empid = pj.teamid)
+select tek.empname, mg.managername, dept.deptname, pj.projectname from tek_employee tek left outer join manager mg
+ on (tek.manager_id = mg.managerid) left outer join department dept on (tek.department_id = dept.deptid)
+join project pj  on (tek.empid = pj.teamid);
+
+select tek.empname, mg.managername, dept.deptname, pj.projectname from tek_employee tek 
+join project pj  on (tek.empid = pj.teamid) right outer join manager mg
+ on (tek.manager_id = mg.managerid) right outer join department dept on (tek.department_id = dept.deptid)
+ union 
+select tek.empname, mg.managername, dept.deptname, pj.projectname from tek_employee tek 
+join project pj  on (tek.empid = pj.teamid) right outer join manager mg
+ on (tek.manager_id = mg.managerid) left outer join department dept on (tek.department_id = dept.deptid);
