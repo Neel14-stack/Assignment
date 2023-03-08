@@ -79,3 +79,10 @@ join project pj  on (tek.empid = pj.teamid) right outer join manager mg
 select tek.empname, mg.managername, dept.deptname, pj.projectname from tek_employee tek 
 join project pj  on (tek.empid = pj.teamid) right outer join manager mg
  on (tek.manager_id = mg.managerid) left outer join department dept on (tek.department_id = dept.deptid);
+ 
+ -- MYSQL CROSS JOIN
+ -- Result set will include all rows from both tables, where each row is the combination of the row in the first 
+ -- table with the row in the seocnd table
+ -- Return cartesian product
+ select * from employee;
+ -- 
