@@ -33,3 +33,5 @@ select salary
 from (select avg(salary) as avg_sal from tek_employee) avg_derived_table
 inner join tek_employee
 where salary > avg_derived_table.avg_sal;
+
+
