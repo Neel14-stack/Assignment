@@ -115,4 +115,5 @@ select tek.empname, dept.deptname, cmp.companyname, cmp.location from tek_employ
  
  -- SELF JOIN
  select * from tek_employee;
- select tek.empname, tek.salary from tek_employee tek 
+ select tek1.empname, tek2.salary from tek_employee tek1, tek_employee tek2 
+ where tek1.salary = tek2.salary;
