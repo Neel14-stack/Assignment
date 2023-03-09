@@ -95,3 +95,4 @@ values (@ordernum, 'S18_1749',30,'136',1),
 
 -- 5. commit 
 COMMIT;
+
