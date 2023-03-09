@@ -176,3 +176,14 @@ select * from product_order_summary;
 	-- GRANT SELECT ON 'view name' to 'username'
     
 GRANT select on product_order_summary to root;
+
+-- create or replace view
+-- cannot change column name, or column sequence or order
+-- but can add a new column in the end
+create  or replace view product_order_summary
+as
+select o.order_id, o.date_of_order, p.product_name, c.customer_name, (p.price * o.quality) - ((p.price * o.quality)
+* discount/100) as cost
+from customer_data c cross
+join order_details o on o.cust_id = c.cust_id
+join product p on p.product_id = o.product_id;
