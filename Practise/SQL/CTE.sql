@@ -35,3 +35,5 @@ inner join tek_employee
 where salary > avg_derived_table.avg_sal;
 
 
+
+

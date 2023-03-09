@@ -2,7 +2,7 @@
 -- The union clause is used to combine two seperate select statements and produce the result set as a union of both
 -- the select statement.
 -- Note: The schema field to be used in both select statements must be in same order, same number and data type
-
+use joins;
 select * from employee;
 select * from expense;
 select id from employee union select id from expense;
@@ -33,8 +33,12 @@ select id,expanse from expense;
  table_name = 'part_employee';
  
  -- Drop a specific partition from table
+ --  alter method is used to drop a specific partition which we dont want anymore
  ALTER TABLE part_employee TRUNCATE PARTITION P2;
 
+select * from part_employee;
+select * from part_employee partition (p0);
+select * from part_employee partition (p1);
 -- PARTITION BY LIST
 -- PRODUCT ID (101,102,106)
 -- PRODUCT ID (103,105,108)
