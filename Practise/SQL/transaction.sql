@@ -159,3 +159,12 @@ select o.order_id, o.date_of_order, p.product_name, c.customer_name, round((p.pr
 join product p on p.product_id = o.product_id;
 
 -- CREATE VIEW
+create view product_order_summary
+AS
+select o.order_id, o.date_of_order, p.product_name, c.customer_name, (p.price * o.quality) - ((p.price * o.quality)
+* discount/100) as cost
+from customer_data c cross
+join order_details o on o.cust_id = c.cust_id
+join product p on p.product_id = o.product_id;
+
+select * from product_order_summary;
