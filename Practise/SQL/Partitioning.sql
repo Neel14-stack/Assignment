@@ -56,14 +56,23 @@ select * from part_products;
 -- Distribute data into table evenly
 -- HASH(column) PARTITIONS 4;
 
+select * from employee_part;
+
 -- SYNTAX
 -- create table partition_table
 -- (schema of table)
 -- partition by hash value(column_name)
 -- partition 4;
 
-select * from employee_part limit 5;
+-- create table partition_table
+
+
+-- select * from employee_part limit 5;
+
 drop table if exists country_partition;
+
+-- use key partiton by key with table having primary key, unique key, while creating table dont mention key name in 
+-- partition by key ()
 create table country_partition(empid int, first_name text, last_name text, gender text, city text,
 country varchar(20))
 partition by key(country)
@@ -72,3 +81,7 @@ partitions 6;
  select partition_name, table_rows from information_schema.PARTITIONS 
  WHERE table_schema = 'joins' AND
  table_name = 'country_partition';
+ 
+ select * from country_partition partition (p0);
+ 
+ 
