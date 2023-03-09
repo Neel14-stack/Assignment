@@ -112,5 +112,50 @@ ROLLBACK;
 select * from orders;
 
 -- VIEWS
+-- VIEWS/Materialized Views
+-- Views are Database object
+-- Views is creared over a SQL query
+-- Views are like virtual table and doesnot store any data
 
+create table if not exists customer_data (cust_id varchar(20), customer_name varchar(20), phone bigint, 
+email varchar(30), city_name varchar(20));
 
+create table if not exists product(product_id varchar(20), product_name varchar(20), `brand-company` varchar(20),
+price int);
+
+create table if not exists order_details(order_id int, product_id varchar(20), quality int, cust_id varchar(20),
+discount float, date_of_order date);
+
+INSERT INTO customer_data
+VALUES
+('C1', 'Divya Parasher', 123456789321, 'parasherdivya@example.com', 'Mathura'),
+('C2', 'Mahad Ulah', '456544831568', 'ullahmahad@example.com', 'Bhopal'),
+('C3', 'Arya Pratap Singh', '93543168435', 'aryasingh@example.com', 'lucknow'),
+('C3', 'Atreya Bag', '78965168321', 'bagatreya@example.com', 'Vizag'),
+('C4', 'Mukund Sahu', '673218987351', 'mukund@example.com', 'Mumbai'),
+('C5', 'Parth Tyagi', '8989989899', 'parth@example.com', 'Kota');
+
+INSERT INTO product
+VALUES
+    ('DF12321', 'Mouse', 'Dell', 19.37),
+    ('AM12322', 'Laptop', 'Apple Inc.', 999.41),
+	('MP12333', 'Books', 'Pustak Mahal', 5.19),
+    ('12335M', 'Bottle', 'Milton', 29.35),
+    ('SB12387I', 'Backpack', 'Sky Bags', 89.75),
+    ('PT12389TS', 'Tshirt', 'Polo', 3.53);
+    
+    INSERT INTO order_details
+(order_id, product_id, quality, cust_id, discount, date_of_order)
+VALUES
+    (1111, 'DF12321', 3, 'C2', 0.05, '2022-02-01'),
+    (2122, 'AM12322', 2, 'C1', 0.25, '2022-02-02'),
+    (3323, 'MP12333', 5, 'C1', 0.15, '2022-02-03'),
+    (4447, '12335M', 2, 'C3', 0.10, '2022-02-04'),
+    (5655, 'SB12387I', 3, 'C2', 0.10, '2022-02-05'),
+    (6686, 'PT12389TS', 1, 'C4', 0.15, '2022-02-06');
+
+select o.order_id, o.date_of_order, p.product_name, c.customer_name, round((p.price * o.quality) - ((p.price * o.quality)
+* discount),3) as cost from customer_data c join order_details o on o.cust_id = c.cust_id
+join product p on p.product_id = o.product_id;
+
+-- CREATE VIEW
