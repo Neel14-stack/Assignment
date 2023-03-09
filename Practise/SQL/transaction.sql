@@ -187,3 +187,31 @@ select o.order_id, o.date_of_order, p.product_name, c.customer_name, (p.price * 
 from customer_data c cross
 join order_details o on o.cust_id = c.cust_id
 join product p on p.product_id = o.product_id;
+
+
+-- ALTER VIEW
+-- RENAME EXISTING VIEW COLUMNS WITH NEW COLUMNS
+
+ALTER
+	ALGORITHM = MERGE
+    VIEW product_order_summary AS
+		select o.order_id, o.date_of_order, p.product_name, c.customer_name, (p.price * o.quality) - ((p.price * o.quality)
+* discount/100) as cost
+from customer_data c cross
+join order_details o on o.cust_id = c.cust_id
+join product p on p.product_id = o.product_id;
+
+DROP VIEW product_order_summary;
+
+-- UPDATE
+create or replace view expensive_products
+as 
+select * from product where price > 80;
+
+select * from expensive_products;
+
+update expensive_products
+set product_name = 'Airpods Pro', `brand-company` = 'Apple', price = 1000
+where product_id = 'AM12322';
+
+select * from expensive_products;
