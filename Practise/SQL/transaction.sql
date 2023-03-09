@@ -96,3 +96,21 @@ values (@ordernum, 'S18_1749',30,'136',1),
 -- 5. commit 
 COMMIT;
 
+
+START TRANSACTION;
+set sql_safe_updates = 0;
+
+select count(*) from orders;
+
+DELETE FROM orderdetails;
+DELETE FROM orders;
+
+select count(*) from orders;
+
+ROLLBACK;
+
+select * from orders;
+
+-- VIEWS
+
+
