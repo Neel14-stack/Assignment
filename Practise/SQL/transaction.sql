@@ -168,3 +168,11 @@ join order_details o on o.cust_id = c.cust_id
 join product p on p.product_id = o.product_id;
 
 select * from product_order_summary;
+
+-- security in view is by GRANT
+-- Security in view: Hiding enire query / tables name/ used to generate the view 
+-- create role username loginaccess and password 'login password'
+-- SYNTAX
+	-- GRANT SELECT ON 'view name' to 'username'
+    
+GRANT select on product_order_summary to root;
