@@ -25,6 +25,7 @@ select distinct(name), age, sport, event, games, medal, year from olympic where 
 order by age desc limit 10;
 
 -- 12.	Top 10 Heaviest Athlete by Weight To ever Participate in Olympics Games
-select distinct(name), weight, sport, event, games, medal, year from olympic where weight <> 'NA'
- order by weight desc limit 10;
+select distinct(name), cast(weight as unsigned integer) as weight_kg, sport, event, games, medal, year from olympic where weight <> 'NA'
+ order by weight_kg desc limit 10;
+
 
