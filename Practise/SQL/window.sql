@@ -26,5 +26,8 @@ select employeeid from hr_employee order by employeeid limit 3;
 select * from (select hremp.employeeid, hremp.age, hremp.department, hremp.jobrole, row_number() 
 over(partition by jobrole order by employeeid) as row_num from hr_employee as hremp) as t1 where row_num <4;
 
+-- RANK()
 -- write a query to show top 3 employee from each department earning highest salary
-select hremp.employeeid, hremp.age, hremp.department, 
+select hremp.employeeid, hremp.department, hremp.jobrole, hremp.gender, hremp.income,
+ rank()  over(partition by jobrole) as rank_val
+from hr_employee hremp;
