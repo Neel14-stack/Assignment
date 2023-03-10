@@ -36,3 +36,17 @@ over(partition by jobrole order by employeeid) as row_num from hr_employee as hr
 -- DENSERANK()
 select hremp.employeeid, hremp.age, hremp.department, hremp.jobrole, dense_rank() 
 over(partition by jobrole order by age desc) as rank_val from hr_employee as hremp;
+
+-- Employee ranked on basis of age and work experience
+select hremp.employeeid, hremp.age, hremp.department, hremp.jobrole, hremp.workex, dense_rank() 
+over(partition by jobrole order by age desc, workex desc) as rank_val from hr_employee as hremp;
+
+-- lag()
+select income from hr_employee where employeeid = 28;
+select hremp.employeeid, hremp.department, hremp.jobrole, hremp.gender, hremp.income, hremp.workex, lag(income)
+over(partition by jobrole order by employeeid) as previous_income from hr_employee hremp;
+
+select hremp.employeeid, hremp.department, hremp.jobrole, hremp.gender, hremp.income, hremp.workex, lag(income,2,0)
+over(partition by jobrole order by employeeid) as previous_income from hr_employee hremp;
+
+
