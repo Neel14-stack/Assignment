@@ -9,6 +9,7 @@ select max(income) as salary, department from hr_employee group by department;
 -- employee with department having highest salary
 -- OVER()
 -- Adding over() after aggregate function it will work as an analytical function 
+-- over function is works only after aggregate function
 -- over(): used too specify query to create window of records
 
 select hremp.employeeid, hremp.age, hremp.department, hremp.jobrole, max(income) over() from hr_employee as hremp;
@@ -22,5 +23,8 @@ max(income) over(partition by jobrole) as max_jobrole_income from hr_employee as
 -- ROWNUMBER()
 -- write a query which will show first 3 employee from each jobrole to join the country
 select employeeid from hr_employee order by employeeid limit 3;
-select hremp.employeeid, hremp.age, hremp.department, hremp.jobrole, max(income) over (partition by jobrole) 
-as max_jobrole_income from hr_employee as hremp;
+select * from (select hremp.employeeid, hremp.age, hremp.department, hremp.jobrole, row_number() 
+over(partition by jobrole order by employeeid) as row_num from hr_employee as hremp) as t1 where row_num <4;
+
+-- write a query to show top 3 employee from each department earning highest salary
+select hremp.employeeid, hremp.age, hremp.department, 
