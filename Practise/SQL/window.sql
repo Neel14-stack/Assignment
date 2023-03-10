@@ -29,5 +29,5 @@ over(partition by jobrole order by employeeid) as row_num from hr_employee as hr
 -- RANK()
 -- write a query to show top 3 employee from each department earning highest salary
 select hremp.employeeid, hremp.department, hremp.jobrole, hremp.gender, hremp.income,
- rank()  over(partition by jobrole) as rank_val
+ rank()  over(partition by jobrole order by Income Desc) as rank_val
 from hr_employee hremp;
