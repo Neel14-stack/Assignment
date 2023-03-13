@@ -6,14 +6,14 @@ Created on Fri Mar 10 17:53:54 2023
 """
 
 from shopping_cart import MyshoppingCart
-# =============================================================================
-# 
-# def test_add_to_cart():
-#     cart = MyshoppingCart(5)
-#     cart.add_to_cart('Nike Airforce1')
-#     # debugging the code in python using assert
-#     assert cart.size_of_cart() == 1
-# =============================================================================
+#=============================================================================
+
+def test_add_to_cart():
+    cart = MyshoppingCart(5)
+    cart.add_to_cart('Nike Airforce1')
+    # debugging the code in python using assert
+    assert cart.size_of_cart() == 1
+#=============================================================================
     
 
 def test_when_item_added_then_cart_contains_item():
@@ -34,3 +34,23 @@ def test_when_item_added_then_cart_contains_item():
 # 
 # =============================================================================
         
+# =============================================================================
+# 
+# def test_can_get_total_price():
+#     cart = MyshoppingCart(5)
+#     cart.add_to_cart("Nike Airforce1")
+#     cart.add_to_cart("Adidas Superstar")
+#     cart.add_to_cart("Puma")
+#     
+#     price_map = {
+#         "Nike Airforce1" : 12000,
+#         "AdidA Superstar": 10000,
+#         "Puma":5000}
+#     
+# =============================================================================
+    
+    
+    
+    
+    
+    
