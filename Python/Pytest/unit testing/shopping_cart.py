@@ -12,12 +12,15 @@ from typing import List
 
 class MyshoppingCart:
     def __init__(self) -> None:
+        self.items: List[str] = []
         pass
     
     def add_to_cart(self,item:str):
+        self.items.append(item)
         pass
     
     def size_of_cart(self) -> int:
+        return len(self.items)
         pass
     
     def get_items(self) -> List[str]:
