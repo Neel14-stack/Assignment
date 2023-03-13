@@ -49,4 +49,38 @@ over(partition by jobrole order by employeeid) as previous_income from hr_employ
 select hremp.employeeid, hremp.department, hremp.jobrole, hremp.gender, hremp.income, hremp.workex, lag(income,2,0)
 over(partition by jobrole order by employeeid) as previous_income from hr_employee hremp;
 
+-- lead()
+select hremp.employeeid, hremp.department, hremp.jobrole, hremp.gender, hremp.income, hremp.workex, lead (income)
+over(partition by jobrole order by employeeid) as next_income from hr_employee hremp;
+
+-- combine more than one window function with over()
+select hremp.employeeid, hremp.department, hremp.jobrole, hremp.gender, hremp.income, hremp.workex, lag(income)
+over(partition by jobrole order by employeeid) as previous_income, lead (income) over(partition by jobrole order by
+employeeid) as next_income from hr_employee hremp;
+
+-- write a query to show if income of an employee is higer, lower or equal to the previous employee
+select *, 
+case 
+	when income > previous_income then 'higher'
+    when income < previous_income then 'lower'
+    when income = previous_income then 'equal'
+    end as salary_range
+   from (select hremp.employeeid, hremp.department, hremp.jobrole, hremp.gender, hremp.income, hremp.workex, lag(income)
+over(partition by jobrole order by employeeid) as previous_income from hr_employee hremp) as t1;
+
+create view temp
+as
+select lag(income) over(partition by jobrole order by employeeid) as previous_income from hr_employee;
+
+select * from temp;
+
+alter table hr_employee add column pi int;
+
+-- update a existing table with a new column of pi with previous income
+with tp as
+(select lag(income) over(partition by jobrole order by employeeid) as previous_income from hr_employee
+)
+UPDATE hr_employee
+set hr_employee.pi = tp.previous_income
+from tp;
 
