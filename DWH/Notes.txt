@@ -1,0 +1,6 @@
+Introduction to Datawarehouse
+
+DWH is built by combining data from multiple sources (varity of data) and that supoort analytical reporting
+
+multiple raw data -> extract -> transfrom -> load -> data into dwh -> (sales, finance, customer) -> apply (data analysis, business intelligence, data mining)
+

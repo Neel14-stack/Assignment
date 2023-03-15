@@ -1,0 +1,10 @@
+data preprocessing
+
+missing values
+	- replace by central tendancy
+
+duplicate value - remove
+
+outliners - drop, replace by central tendancy
+
+ETL - extract transform and load

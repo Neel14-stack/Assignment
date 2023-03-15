@@ -1,0 +1,17 @@
+
+BIG DATA TOOLS
+
+1 DATA INGESTION : MIGRATE DATA FROM ONE STORED LOCATION TO ANOTHER LOCATION
+	- SQOOP -> (SQL TO HADOOP) Migrate data from structured storage to Hadoop (HDFS Hadoop distributed file system (its
+	storage of hadoop) datalake).
+	- It is bidirectional tool
+		
+		dbms [structured soucre] (MySql, Sqlite etc) -> Sqoop -> hdfs [destination] (storage of hadoop) (data lake) (s3 aws)
+
+				[Vice versa is also aplicable]
+
+
+Flume
+	- file (Flume.config in that file we will define source, sink(hdfs)[destination], channel)
+	- Ingestion of stream data from source (twitter, ipaddress, or any live source)
+	- all configuration are added in flume.config

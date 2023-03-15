@@ -1,0 +1,13 @@
+
+structured data:
+	data will be following single format, with data arrangment in a tabular format
+
+semi structured data:
+	data will have some format but there is no common format
+	- json : {key,value}
+	- XML : tags
+	- CSV : seperated by comma
+	- Big data file format : Parquet, AVRO, ORC
+
+unstructured: 
+	there are no structure eg audio, video, image, flatfiles, signals, pdf, word doc
