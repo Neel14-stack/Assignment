@@ -110,3 +110,10 @@ large no of small size block -> more metadata -> more resources required by name
 ## to access hadoop and its all applicaton
 - localhost:5070/
 - localhost:8088/
+
+## linux command
+- jps (to see all the services running like (nodemanager, recoursemanager, datanode, secondarynamenode, namenode, jps)
+- start-dfs.sh && start-yarn.sh (sh refers to shell)
+- stop-dfs.sh && stop-yarn.sh
+
+
