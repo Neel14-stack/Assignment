@@ -86,7 +86,20 @@ large no of small size block -> more metadata -> more resources required by name
 ![Screenshot 2023-03-16 163653](https://user-images.githubusercontent.com/54886608/225600404-87ecc2cb-fbf7-47e7-b0ac-39d9e8d7c6d8.png)
 
 
-- Application manager - responsible for accepting the job from job scheduler, then it will be asking the node manager where are the resouces and later it will get allocated container.
+### Application manager 
+- responsible for accepting the job from job scheduler, then it will be asking the node manager where are the resouces and later it will get allocated container.
 - for every single job there is a app master, and when the job is completed it get destoryed
 - Application Manager negotiates with node manaer on resources.
 - monior the running job status ssend by app master
+- It restarts job on job excution failure
+
+
+### Application Master
+- it will be running one per each job submitted
+- managing multiple containers and monitoring their resource usage
+- app master destroy iitself after successful completion of job
+
+### Node Manager
+- it sends signal to resource manager at regular interval
+- node manager is salve service
+- node manager creates containers and application master on request of job 
