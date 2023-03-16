@@ -1,0 +1,25 @@
+## HDFS AArchitecture
+
+### In HDFC architecture we have manily 2 things Name Node (Master service)
+- Name Node is a master service that stores metadata of each data blocks (location, size , no of replicas, permission)
+- then we have racks and node which store our blocks...
+
+when our one cluster is corrupted its mater service (name node) duty to find its replicas and continue with the process, and we always
+out put our different blocks in different nodes for example if our block b1 and b2 are in rack 1 with cluster number 2 but when we replicated 
+them into another rack with cluster we will put block b1 in different cluster and block b2 in different cluster 
+
+- Replicas = dfs.replica = 3 (default)
+- Replicas will be stored in such way that no two same blcoks are places within same data node.
+- HDFS manages data block in such a way that it is always highly avaiable.
+
+
+Cluster -> 
+
+
+
+## Issue with Hadoop 1.0
+- In Hadoop there is no concept of multiple namenode so namenode get down in regular interval.
+- to overcome this Hadoop 2.0 introduce which have multiple name node
+- And we uses Hadoop 2.0
+
+## HDFS VERSION 2.0
