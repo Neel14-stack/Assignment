@@ -105,3 +105,8 @@ large no of small size block -> more metadata -> more resources required by name
 - it sends signal to resource manager at regular interval
 - node manager is salve service
 - node manager creates containers and application master on request of job 
+
+
+## to access hadoop and its all applicaton
+- localhost:5070/
+- localhost:8088/
