@@ -82,3 +82,7 @@ large no of small size block -> more metadata -> more resources required by name
 - data node
 - resource node
 - node manager
+
+
+Application manager - responsible for accepting the job from job scheduler, then it will be asking the node manager where are the resouces and later it will get allocated container.
+for every single job there is a app master, and when the job is completed it get destoryed
