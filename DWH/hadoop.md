@@ -35,3 +35,6 @@ Cluster ->
 * Edit logs : Change in FSImage from last snapshot
 * FSImage: FSImage is point in time snapshot of HDFS cluster
 * Namespaces : One of the content stored in FSImage, HDFS path to datablocks.
+
+**When active namenode is down standby namenode works as a active namenode. and this is done by  coordinator (Zookeeper)**
+- Zookeeper is a coordinator which check health status of active namenode.
