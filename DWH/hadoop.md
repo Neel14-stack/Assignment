@@ -47,3 +47,13 @@ Cluster ->
 - there are 3 zookeeper, if one goes down another one will replace it
 
 ![WhatsApp Image 2023-03-16 at 1 17 08 PM](https://user-images.githubusercontent.com/54886608/225549257-0e7e4597-bf04-4a92-a6d9-d9bbf3c8d75b.jpeg)
+
+** Q. Is hadoop good for processing small no of large block size or large no of small size blocks ? **
+- HDFS uses large block size to store data, which generates less no of namespaces resulting into less burdon on namenode
+large no of small size block -> more metadata -> more resources required by namenode
+
+** Q. Can multiple clients request to perform write to HDFS at same time**
+- HDFS follows write once read many.
+
+** Q. Namenode safemode **
+- multile read operations are there but only one write operation will be allowed, and if someone else tries to write it will show Namenode is in safemode.
