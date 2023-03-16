@@ -56,4 +56,29 @@ large no of small size block -> more metadata -> more resources required by name
 - HDFS follows write once read many.
 
 ** Q. Namenode safemode **
-- multile read operations are there but only one write operation will be allowed, and if someone else tries to write it will show Namenode is in safemode.
+- multile read operations are there but only one write operation will be allowed, and if someone else tries to write it will show Namenode is in safemode. HDFS goes into Read only Mode.
+- To clinet will be allowed to perform write operation or update
+- HDFS dfsadmin - safemode leave
+
+** Q. What is heartbest in HDFS **
+- In HDFS, heartbeat refers to the periodic signal sent by DataNodes to the NameNode to inform it that the DataNode is alive and functioning properly.
+- DataNodes are responsible for storing and managing the actual data in HDFS. They send heartbeat signals to the NameNode every few seconds to inform it that they are still operational. This helps the NameNode keep track of the health of the DataNodes and detect any failures or network issues.
+
+** Q. What is FSCK in Hadoop **
+- File system check, which checks for any error and check the replication factor as well (important), check block size is managed or not
+
+** Q. What happen when a data nodes goes down to replicas of datablocks **
+- when data node goes down new replicas of blocks present in datanode will be created, when the datanode which wad won is up again the newly created datablcoks well automatically deleted.
+
+** Q. How many blocks will be created for a file size of 130mb what will be size of datablocks **
+- 2 Blocks will be created : 128mb + 2 mb
+
+** Q. Whta is Disk balancer in HDFS **
+- Balances data evenly across disk witin datanode
+
+## 5 serives (3 from hdfs and 2 from yarn)
+- Name node
+- secondary name node
+- data node
+- resource node
+- node manager
