@@ -26,3 +26,12 @@ Cluster ->
 - And we uses Hadoop 2.0
 
 ## HDFS VERSION 2.0
+- we have FSImaage
+- and Logs
+
+![WhatsApp Image 2023-03-16 at 12 53 30 PM](https://user-images.githubusercontent.com/54886608/225543763-a017d15a-bc14-4890-b0a9-e2f2c2dcc41a.jpeg)
+
+
+* Edit logs : Change in FSImage from last snapshot
+* FSImage: FSImage is point in time snapshot of HDFS cluster
+* Namespaces : One of the content stored in FSImage, HDFS path to datablocks.
