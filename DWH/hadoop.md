@@ -76,6 +76,8 @@ large no of small size block -> more metadata -> more resources required by name
 ** Q. Whta is Disk balancer in HDFS **
 - Balances data evenly across disk witin datanode
 
+## YARN (YET ANOTHER RESOURCE NEGOTIATOR)
+
 ## 5 serives (3 from hdfs and 2 from yarn)
 - Name node
 - secondary name node
