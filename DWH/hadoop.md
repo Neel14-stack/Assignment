@@ -38,3 +38,6 @@ Cluster ->
 
 **When active namenode is down standby namenode works as a active namenode. and this is done by  coordinator (Zookeeper)**
 - Zookeeper is a coordinator which check health status of active namenode.
+- there are 3 zookeeper, if one goes down another one will replace it
+
+![WhatsApp Image 2023-03-16 at 1 17 08 PM](https://user-images.githubusercontent.com/54886608/225549257-0e7e4597-bf04-4a92-a6d9-d9bbf3c8d75b.jpeg)
