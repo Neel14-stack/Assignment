@@ -28,8 +28,14 @@ Cluster ->
 ## HDFS VERSION 2.0
 - we have FSImaage
 - and Logs
+- we have more than one namenode called as active passive namenode
 
 ![WhatsApp Image 2023-03-16 at 12 53 30 PM](https://user-images.githubusercontent.com/54886608/225543763-a017d15a-bc14-4890-b0a9-e2f2c2dcc41a.jpeg)
+
+## Hadoop 2.o core components
+- **Yarn is how to job should excute**
+- ** while hdfs is how data is stored**
+- 
 
 
 * Edit logs : Change in FSImage from last snapshot
