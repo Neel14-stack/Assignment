@@ -143,3 +143,17 @@ whenever there is aggregate function there will be reducer
 - we can define how mnay resultant file we need at the end using no of reducer
 
 ![WhatsApp Image 2023-03-20 at 12 27 27 PM](https://user-images.githubusercontent.com/54886608/226268527-52abe81a-8e60-489e-bdd2-e6992fd1c874.jpeg)
+
+
+## SCOOP COMMANDS
+
+create new db\
+create database db;\
+show database;\
+use db;\
+create table table_name (schema of tablw with dataype , primary key);\
+create table emp (empid int, empname varchar, salary int, department varchar);\
+insert into tablename values(values seperated by  ',');\
+
+sqoop import --connect jdbc:mysql:localhost/databasename --username root --password hadoop@123 --tabel emptable -m 2 --target-dir '/output/'\
+** that -m 2 defines the number of map job, the more the number of map job will be the faster it will be **
