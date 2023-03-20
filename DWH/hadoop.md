@@ -182,3 +182,17 @@ sqoop export --connect jdbc:mysql://localhost/databasename --username root --pas
   \
   sqoop export --connect jdbc:mysql://localhost/databasename --username root --passwor hadoop@123 --export-dir /employee/employee.csv --table employee --input-fields-terminated-by ',' --input lines-terminated-by '/n'\
   
+
+ ## SQOOP JOB COMMAND
+  - sqoop list job\
+  sqoop job --list
+  \
+  - show job\
+  sqoop job --show jobname
+  \
+  - excute job\
+  sqoop job --exec mynewjob
+  \
+  \
+  - delete job\
+  sqoop job --delete jobname
