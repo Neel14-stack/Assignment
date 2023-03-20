@@ -122,3 +122,7 @@ whenever there is aggregate function there will be reducer
 - there are 2 things in map reduce
 - MAPPER JOB AND REDUCER JOB
 - there might be alone MAPPER JOB but there wont be any case of SOLO REDUCER JOB 
+
+### NOTES
+- No of ballots is equal to no of teller
+- no of blocks is equal to no of map job
