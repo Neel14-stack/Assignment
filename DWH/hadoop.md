@@ -136,3 +136,10 @@ whenever there is aggregate function there will be reducer
 - no of nodes is equal to no of reducer
 
 ** migration is map only jon **
+
+** Why Madreduce
+- prallel processing, all the jobs can run at same time
+- time efficent
+- we can define how mnay resultant file we need at the end using no of reducer
+
+![WhatsApp Image 2023-03-20 at 12 27 27 PM](https://user-images.githubusercontent.com/54886608/226268527-52abe81a-8e60-489e-bdd2-e6992fd1c874.jpeg)
