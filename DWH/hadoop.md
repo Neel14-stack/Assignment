@@ -147,6 +147,7 @@ whenever there is aggregate function there will be reducer
 
 ## SCOOP COMMANDS
 
+## SCOOP IMPORT (MYSQL TO HDFS)
 create new db\
 create database db;\
 show database;\
@@ -157,3 +158,22 @@ insert into tablename values(values seperated by  ',');\
 
 sqoop import --connect jdbc:mysql:localhost/databasename --username root --password hadoop@123 --tabel emptable -m 2 --target-dir '/output/'\
 ** that -m 2 defines the number of map job, the more the number of map job will be the faster it will be **
+
+
+## SCOOP EXPORT (HDFS TO MYSQL)
+login in mysql\
+command mysql -u root -p <press enter>\
+hadoop@123\
+  
+  change database name\
+  use amitdb;\
+  \
+  create new tabel in mysql \
+  create tabel if not exists emptable (empid int, empaname varchar(50), salary int, department varchar(60), designation vachar(60));\
+  \
+  switch to new terminal\
+  sqoop export --connect jdbc:mysql://localhost/databasename --username root --passwor hadoop@123 --export-dir /employee/employee.csv --table employee --input-fields-terminated-by ',' --input lines-terminated-by '/n'\
+  \
+  \
+  sqoop export --connect jdbc:mysql://localhost/databasename --username root --passwor hadoop@123 --export-dir /employee/employee.csv --table employee --input-fields-terminated-by ',' --input lines-terminated-by '/n'\
+  
