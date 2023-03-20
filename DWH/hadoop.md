@@ -185,14 +185,16 @@ sqoop export --connect jdbc:mysql://localhost/databasename --username root --pas
 
  ## SQOOP JOB COMMAND
   - sqoop list job\
-  sqoop job --list
-  \
+  sqoop job --list\
+  
   - show job\
-  sqoop job --show jobname
-  \
+  sqoop job --show jobname\
+  
   - excute job\
-  sqoop job --exec mynewjob
-  \
-  \
+  sqoop job --exec mynewjob\
+  
   - delete job\
-  sqoop job --delete jobname
+  sqoop job --delete jobname\
+  
+  - job create\
+  sqoop job --create sqoopjob -- import --connect jdbc:mysql://localhost/neeldb --username root --password hadoop@123 --query "select * from hrtable where country = 'Iran' AND \$CONDITIONS" -m 1 --target-dir '/Iran_part2/'
