@@ -126,3 +126,6 @@ whenever there is aggregate function there will be reducer
 ### NOTES
 - No of ballots is equal to no of teller
 - no of blocks is equal to no of map job
+- no of nodes is equal to no of reducer
+
+** migration is map only jon **
