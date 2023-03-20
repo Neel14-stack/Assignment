@@ -123,6 +123,13 @@ whenever there is aggregate function there will be reducer
 - MAPPER JOB AND REDUCER JOB
 - there might be alone MAPPER JOB but there wont be any case of SOLO REDUCER JOB 
 
+![WhatsApp Image 2023-03-20 at 12 17 47 PM](https://user-images.githubusercontent.com/54886608/226266883-b1b599df-815e-4eae-b101-c4e2c5c60253.jpeg)
+
+![WhatsApp Image 2023-03-20 at 12 17 46 PM](https://user-images.githubusercontent.com/54886608/226266930-20c3183e-ca7b-4f2c-93b3-4737cac9dbc9.jpeg)
+
+![WhatsApp Image 2023-03-20 at 12 17 45 PM](https://user-images.githubusercontent.com/54886608/226266978-a365568e-25ab-456e-8e57-45ebe36bc685.jpeg)
+
+
 ### NOTES
 - No of ballots is equal to no of teller
 - no of blocks is equal to no of map job
