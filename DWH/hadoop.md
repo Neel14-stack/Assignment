@@ -116,4 +116,9 @@ large no of small size block -> more metadata -> more resources required by name
 - start-dfs.sh && start-yarn.sh (sh refers to shell)
 - stop-dfs.sh && stop-yarn.sh
 
+## 20/03 MAP REDUCE
+whenever there is aggregate function there will be reducer
 
+- there are 2 things in map reduce
+- MAPPER JOB AND REDUCER JOB
+- there might be alone MAPPER JOB but there wont be any case of SOLO REDUCER JOB 
