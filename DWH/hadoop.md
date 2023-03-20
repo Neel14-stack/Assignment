@@ -165,14 +165,19 @@ login in mysql\
 command mysql -u root -p <press enter>\
 hadoop@123\
   
-  change database name\
-  use amitdb;\
-  \
-  create new tabel in mysql \
-  create tabel if not exists emptable (empid int, empaname varchar(50), salary int, department varchar(60), designation vachar(60));\
-  \
-  switch to new terminal\
-  sqoop export --connect jdbc:mysql://localhost/databasename --username root --passwor hadoop@123 --export-dir /employee/employee.csv --table employee --input-fields-terminated-by ',' --input lines-terminated-by '/n'\
+change database name\
+use amitdb;\
+\
+create new tabel in mysql \
+create tabel if not exists emptable (empid int, empaname varchar(50), salary int, department varchar(60), designation vachar(60));\
+\
+create a new dir in HDFS and copy file to HDFS\
+hdfs dfs -mkdir /Employee\
+hdfs dfs -put /home/hadoop/downloads/EMployee.csv /Employee\
+\  
+\  
+switch to new terminal\
+sqoop export --connect jdbc:mysql://localhost/databasename --username root --passwor hadoop@123 --export-dir /employee/employee.csv --table employee --input-fields-terminated-by ',' --input lines-terminated-by '/n'\
   \
   \
   sqoop export --connect jdbc:mysql://localhost/databasename --username root --passwor hadoop@123 --export-dir /employee/employee.csv --table employee --input-fields-terminated-by ',' --input lines-terminated-by '/n'\
