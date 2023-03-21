@@ -198,3 +198,11 @@ sqoop export --connect jdbc:mysql://localhost/databasename --username root --pas
   
   - job create\
   sqoop job --create sqoopjob -- import --connect jdbc:mysql://localhost/neeldb --username root --password hadoop@123 --query "select * from hrtable where country = 'Iran' AND \$CONDITIONS" -m 1 --target-dir '/Iran_part2/'
+
+  
+## Hive
+  hive is used to convert all the semi structured data into structed data
+  - we can create 3 different types of table in hive 
+    - managed table
+    - external table
+    - temp table
