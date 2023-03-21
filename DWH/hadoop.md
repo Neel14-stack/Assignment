@@ -206,3 +206,5 @@ sqoop export --connect jdbc:mysql://localhost/databasename --username root --pas
     - managed table
     - external table
     - temp table
+  
+  ** whenever we load data from HDFS to HIVE, it will permanantly move the data from HDFS storage to HIVE storage bcz at the end both have same storage. so to have a duplicate of same file is not efficent, that's why hadoop move the file from hdfs to hive permanantly 
