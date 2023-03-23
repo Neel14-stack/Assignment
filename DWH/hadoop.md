@@ -76,6 +76,13 @@ large no of small size block -> more metadata -> more resources required by name
 ** Q. Whta is Disk balancer in HDFS **
 - Balances data evenly across disk witin datanode
 
+![Hadoop Quiz](https://user-images.githubusercontent.com/54886608/227125804-33d9bae2-0dd7-485e-97f1-e7ff50340961.png)
+
+
+
+![HDFS Architechture](https://user-images.githubusercontent.com/54886608/227125670-6f661f93-7f5a-453a-b27d-cb0d48e055a5.png)
+
+
 ## YARN (YET ANOTHER RESOURCE NEGOTIATOR)
 
 ## 5 serives (3 from hdfs and 2 from yarn)
@@ -105,6 +112,10 @@ large no of small size block -> more metadata -> more resources required by name
 - it sends signal to resource manager at regular interval
 - node manager is salve service
 - node manager creates containers and application master on request of job 
+
+
+![YARN Architecture (2)](https://user-images.githubusercontent.com/54886608/227125756-55f8cd16-bc8c-45b9-b473-f055f1f71684.png)
+
 
 
 ## to access hadoop and its all applicaton
@@ -208,3 +219,5 @@ sqoop export --connect jdbc:mysql://localhost/databasename --username root --pas
     - temp table
   
   ** whenever we load data from HDFS to HIVE, it will permanantly move the data from HDFS storage to HIVE storage bcz at the end both have same storage. so to have a duplicate of same file is not efficent, that's why hadoop move the file from hdfs to hive permanantly 
+  
+
