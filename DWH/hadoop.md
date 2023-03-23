@@ -220,4 +220,12 @@ sqoop export --connect jdbc:mysql://localhost/databasename --username root --pas
   
   ** whenever we load data from HDFS to HIVE, it will permanantly move the data from HDFS storage to HIVE storage bcz at the end both have same storage. so to have a duplicate of same file is not efficent, that's why hadoop move the file from hdfs to hive permanantly 
   
+#### Notes
+  - Hive tool is used for running ad hoc queries (similar to sql)
+  - Hive uses default location to store files "/user/hive/warehouse" (this is location where all db, tables are stored), (this locatiion can be accessed by other data processing tool example spark sql)
+  - beeline is used to open multiple hive instance
+  - whereas hive cli (command line interface) allows us to open only one hive instance
+  - although to run beeline need hiveserver2 to run multiple hive instances
+  - .hql file
+  - web editor (HUE, it helps to run query in web) clouder vm
 
