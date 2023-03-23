@@ -229,3 +229,5 @@ sqoop export --connect jdbc:mysql://localhost/databasename --username root --pas
   - .hql file
   - web editor (HUE, it helps to run query in web) clouder vm
 
+  
+  ** Fault tolerance - we have DAG (directed acyclic graph), suppose our code stopped in between somewhere. we can start the execution again and this time we have DAG and we will come to that place where our excution stopped. that's why hive is fault tolerance. ** DAG is just make the flow of execution 
