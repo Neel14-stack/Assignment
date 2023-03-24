@@ -236,3 +236,7 @@ sqoop export --connect jdbc:mysql://localhost/databasename --username root --pas
 ### Hiverserve2 Architecture
   - Multiple session instance can can be started
   - Thrift service - handles multile job submitting by multiple users
+
+  
+ ## partitioning
+  - by default partitioning is 100 and it always takes the last column for partitioning that's the demerit of this 
