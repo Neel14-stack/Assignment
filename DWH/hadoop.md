@@ -240,3 +240,9 @@ sqoop export --connect jdbc:mysql://localhost/databasename --username root --pas
   
  ## partitioning
   - by default partitioning is 100 and it always takes the last column for partitioning that's the demerit of this 
+  
+## Partioning + Bucketing
+  - in partitioning we have fixed number of columns which is last one in the table
+  - but in case of bucketing we can sepficy number of colunns for division
+  - buckeitng tries to make a uniform data 
+  - partitioning is map only job, while bucketing is map reduce job
