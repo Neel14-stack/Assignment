@@ -246,3 +246,8 @@ sqoop export --connect jdbc:mysql://localhost/databasename --username root --pas
   - but in case of bucketing we can sepficy number of colunns for division
   - buckeitng tries to make a uniform data 
   - partitioning is map only job, while bucketing is map reduce job
+
+  
+## AVRO TABLE
+  - by default avro table cannt handle NULL values
+  - to make it work, we have to create another table with taking care of NULL value
