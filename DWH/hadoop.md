@@ -251,3 +251,7 @@ sqoop export --connect jdbc:mysql://localhost/databasename --username root --pas
 ## AVRO TABLE
   - by default avro table cannt handle NULL values
   - to make it work, we have to create another table with taking care of NULL value
+  
+## PARQUET
+  - it reduces the file size without dropping any dataset
+  - it fast in access
