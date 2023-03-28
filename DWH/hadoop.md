@@ -255,3 +255,11 @@ sqoop export --connect jdbc:mysql://localhost/databasename --username root --pas
 ## PARQUET
   - it reduces the file size without dropping any dataset
   - it fast in access
+  
+  
+# REVISION
+  ### HADOOP 
+    -  copyFromLocal -> This restricts your copy from file to local (it takes only one source)
+    - PUT -> can take files from multiple sources 
+  ### SCOOP
+    - 
