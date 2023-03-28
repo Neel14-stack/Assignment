@@ -303,3 +303,9 @@ sqoop export --connect jdbc:mysql://localhost/databasename --username root --pas
   * what exactly happens in namenode safemode ? give some statements
     - it is maintenance state of namenode (fsimage + editlogs to fsimages -> moves to backup node)
     - safemode chages cluster into read only mode
+  
+  * HIVE PARTITIONING VS BUCKETING
+    - partitioning is map-only job, bucketing is reducer job
+    - partitioning is static as well as dynamic
+  
+  * in hive you can copy the schema f
