@@ -262,4 +262,44 @@ sqoop export --connect jdbc:mysql://localhost/databasename --username root --pas
     -  copyFromLocal -> This restricts your copy from file to local (it takes only one source)
     - PUT -> can take files from multiple sources 
   ### SCOOP
-    - 
+    - import
+    - export
+    - import-all-tables
+    - export-all-tables
+    - job
+    - eval
+    - scoop -> import --connect database --username --password --query
+    
+  * HOW TO CHANGE THE BLOCKSIZE FOR PARTICULAR FILE IN HDFS
+    - hdfs dfs -Dfs.blocksize = new block size in bytes
+  
+  * What is default datawarehouse in hive ?
+    - derbyDB
+  
+  * what is command to bucket the tables ?
+    - Clustered by (column name) into 10 buckets
+  
+  * what are valid hadoop configuration files ?
+    - Hadoop-env.sh
+    - core-site.xml
+    - yarn-site.cml
+    - mapred-site.xml
+    - hdfs-site.xml
+  
+  * Distributed cache can be used in REDUCER JOB.
+ 
+  * HDFS command to check inconstatncy
+     - hdfs fsck/path to dir /path to blocks
+  
+  * Checkpoint node download FSImage and editlogs from active namenode, it merge existing fsimage with edit logs and store modified fsimage to
+    - into active namenode
+  
+  * hdfs command to get current status of safe mode of namenode ?
+    - hdfs dfsadmin -safemode get
+  
+  * hdfs allows client to read a file which is already opened for write operations by other client ?
+    - False ( write one read many)
+  
+  * what exactly happens in namenode safemode ? give some statements
+    - it is maintenance state of namenode (fsimage + editlogs to fsimages -> moves to backup node)
+    - safemode chages cluster into read only mode
