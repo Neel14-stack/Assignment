@@ -10,3 +10,5 @@
 
 Q. difference between mysql and oracle, bcz mysql is not good for production . so is oracle good for produciton . like client - server architecture ?
 
+- first designer -> workflow manager -> workflow monitor -> rep monitor
+
