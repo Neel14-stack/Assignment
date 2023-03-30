@@ -1,1 +1,3 @@
 - database works on normalization while datawarehouse works on de normalization
+- metadata -> repository
+- informatica is frontend
