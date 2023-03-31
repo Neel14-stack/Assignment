@@ -45,3 +45,6 @@ Q. difference between mysql and oracle, bcz mysql is not good for production . s
   - Data granularity is a measure of the level of detail in a data structure. In time-series data, for example, the granularity of measurement might be based on intervals of years, months, weeks, days, or hours.
 
 ** log files are generated in case of online (client - server architecture) for example while chatting in whatsapp log files are generated, while in case of ms word its not based on client server and its offline so there is no need of log files to create **
+
+### parsed data
+- passing -> execution -> fetching
