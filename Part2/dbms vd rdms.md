@@ -18,21 +18,30 @@ Q. difference between mysql and oracle, bcz mysql is not good for production . s
 - metadata and lineage analysis (reports and metadata manager)
 
 
-** in dataware house we talk in dimenion and facts, while in db it all about tables **
+** in dataware house we talk in dimenion table and facts table, while in db it all about tables **
 - A decision support system (DSS) is a system—specifically, an interactive information system—built on top of a data warehouse to make it easy to query or pull information from data
 
 ## ETL FOR DATA WAREHOUSING
-- OPERATIONAL SYSTEM
+- OPERATIONAL SYSTEM (EXTRACT)
   - RDBMS -> MAINFRAME -> OTHER
     - Transaction data
     - Optimized for transaction response time
     - current
     - normalized or de normalized data
 
-- DECISION SUPPORT
+- (TRANSFORM)
+  - aGGREGATE DATA
+  - cLEANSE DATA
+  - CONSOLIDATE DATA
+  - APPLY BUSINESS DATA
+  - DE NORMALIZE DATA
+
+- DECISION SUPPORT (LOAD)
   - DATA WAREHOUSE
     - Aggregated data
     - Historical data
 
 - What is Data Granularity?
   - Data granularity is a measure of the level of detail in a data structure. In time-series data, for example, the granularity of measurement might be based on intervals of years, months, weeks, days, or hours.
+
+** log files are generated in case of online (client - server architecture) for example while chatting in whatsapp log files are generated, while in case of ms word its not based on client server and its offline so there is no need of log files to create **
