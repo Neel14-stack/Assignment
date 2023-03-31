@@ -33,3 +33,6 @@ Q. difference between mysql and oracle, bcz mysql is not good for production . s
   - DATA WAREHOUSE
     - Aggregated data
     - Historical data
+
+- What is Data Granularity?
+  - Data granularity is a measure of the level of detail in a data structure. In time-series data, for example, the granularity of measurement might be based on intervals of years, months, weeks, days, or hours.
