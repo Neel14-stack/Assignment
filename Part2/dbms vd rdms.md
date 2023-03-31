@@ -21,3 +21,15 @@ Q. difference between mysql and oracle, bcz mysql is not good for production . s
 ** in dataware house we talk in dimenion and facts, while in db it all about tables **
 - A decision support system (DSS) is a system—specifically, an interactive information system—built on top of a data warehouse to make it easy to query or pull information from data
 
+## ETL FOR DATA WAREHOUSING
+- OPERATIONAL SYSTEM
+  - RDBMS -> MAINFRAME -> OTHER
+    - Transaction data
+    - Optimized for transaction response time
+    - current
+    - normalized or de normalized data
+
+- DECISION SUPPORT
+  - DATA WAREHOUSE
+    - Aggregated data
+    - Historical data
