@@ -5,6 +5,7 @@
   - the files are converted into logical then it can be read only
   - orcale will be there to read all the files from rep
   - informatics need a support of rdbms (oracle)
+  - informatica gives error at the end of the excution that's the drawback of informatica
 
 - schema is a collection of objects stored in a place and active when required.
 
