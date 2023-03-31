@@ -12,3 +12,12 @@ Q. difference between mysql and oracle, bcz mysql is not good for production . s
 
 - first designer -> workflow manager -> workflow monitor -> rep monitor
 
+## Informatioca power centre
+- "database neutal" - will communicatew with any database
+- powerful data transformation covert one application's data to another's format
+- metadata and lineage analysis (reports and metadata manager)
+
+
+** in dataware house we talk in dimenion and facts, while in db it all about tables **
+- A decision support system (DSS) is a system—specifically, an interactive information system—built on top of a data warehouse to make it easy to query or pull information from data
+
