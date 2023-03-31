@@ -48,3 +48,8 @@ Q. difference between mysql and oracle, bcz mysql is not good for production . s
 
 ### parsed data
 - passing -> execution -> fetching
+- write a query -> goes for parsing -> then it takes help from metadata -> fetching happend with the help of cursor
+
+
+## Notes
+- see, the thing is that. Informatica cant read files on his own so we have orcale to read files and convert it into informatica readable format and then we do the mapping bewtween soruce and target
