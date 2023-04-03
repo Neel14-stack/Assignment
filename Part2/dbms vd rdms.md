@@ -17,6 +17,7 @@
 - SNOWFLAKE sceme is extension of dimension (we have chlid and parental chain in snowflake)
 - snowflake schema leds us to database instead of dataware house
 - dont create too many snowflake schema, we have to prevent creating snowflake schema
+- dataware house doesn't need uniqueness, database is already there to maintain the uniqueness. so datawware house can contain redudant values
 
 Q. difference between mysql and oracle, bcz mysql is not good for production . so is oracle good for produciton . like client - server architecture ?
 
