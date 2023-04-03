@@ -60,3 +60,4 @@ Q. difference between mysql and oracle, bcz mysql is not good for production . s
 
 ### DATABASE VS DATAWARE HOUSE
 ** data model refers to database, while dimension model is refer dataware house **
+- We build the dataware on the basis of INMON AND kIIMBALL theory (IMP)
