@@ -11,6 +11,12 @@
 - FACT TABLE is summerized data stored in a star schema under data mart
 - A data mart can consist of one start sechema or multiple start schema
 - dimension are descriptive in nature which is a part of star schema 
+- fact tbale consist of foreign key
+- while dimension table consist of primay key
+- first we design dimension table and then fact tbale comes into the picture
+- SNOWFLAKE sceme is extension of dimension (we have chlid and parental chain in snowflake)
+- snowflake schema leds us to database instead of dataware house
+- dont create too many snowflake schema, we have to prevent creating snowflake schema
 
 Q. difference between mysql and oracle, bcz mysql is not good for production . so is oracle good for produciton . like client - server architecture ?
 
@@ -66,4 +72,6 @@ Q. difference between mysql and oracle, bcz mysql is not good for production . s
 ** data model refers to database, while dimension model is refer dataware house **
 - We build the dataware on the basis of INMON AND kIIMBALL theory (IMP)
 
-Q. 
+** CONFIRM DIMENSION
+-
+- is used to contect 2 fact table from different stat scheman, and there will be n number of confirm dimension
