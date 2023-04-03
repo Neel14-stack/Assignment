@@ -79,3 +79,10 @@ Q. difference between mysql and oracle, bcz mysql is not good for production . s
 - it contain the common attributes between the 2 different star schema (fact table common attribute) for example, we have sales and marketing  start schema and the common attribute between those start schema is product. so while connect these 2 star schema the confirm dimension will contain only the product.
 
 ** MOST OF THE TIME KIMBALL THEORY IS USED **
+
+- MAPPING IS NOTHING BUT A SET OF INSTRUCTION BETWEEN SOURCE AND TARGET, AND THAT SET OF INSTRUCTION IS KNOWN AS TRANSFORMATION
+- Informatica Transformations are the repository objects which create, modify, or pass the data to the defined target structures like files, tables, or any other target fields required. A transformation is nothing but a set of instructions that define the data flow and load the data into the target. Informatica offers multiple transformations for performing specific functionalities. 
+
+To understand Informatica transformations more precisely, let’s know what mapping is?
+
+A mapping is nothing but a collection of source and target objects that are linked by a set of transformations. Hence the purpose of transformation is to indicate the operations that the integration service will perform on the data during workflow execution.
