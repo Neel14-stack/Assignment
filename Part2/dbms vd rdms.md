@@ -86,3 +86,14 @@ Q. difference between mysql and oracle, bcz mysql is not good for production . s
 To understand Informatica transformations more precisely, let’s know what mapping is?
 
 A mapping is nothing but a collection of source and target objects that are linked by a set of transformations. Hence the purpose of transformation is to indicate the operations that the integration service will perform on the data during workflow execution.
+
+### EXPRESSION TRANSFORMATION
+- it change in the data record by record
+- somes rules are 
+  - adjust employee salaries
+  - concantennate first and last anme
+  - convert string to numbers and dates
+  - arithmetica - add, subtract, multiply, divide numeric values
+  - test conditional statements and pass the results to target tables or other transformation
+- we dont touch the column, column is structural based
+- we dont use DML commands on source
