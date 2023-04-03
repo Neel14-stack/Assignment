@@ -74,4 +74,6 @@ Q. difference between mysql and oracle, bcz mysql is not good for production . s
 
 ** CONFIRM DIMENSION
 -
-- is used to contect 2 fact table from different stat scheman, and there will be n number of confirm dimension
+- is used to connect 2 fact table from different stat scheman, and there will be n number of confirm dimension (within the a single datamart)
+- the confirm dimension is used to connect 2 data mart (in dataware house, to connect 2 different datamart)
+- it contain the common attributes between the 2 different star schema (fact table common attribute) for example, we have sales and marketing  start schema and the common attribute between those start schema is product. so while connect these 2 star schema the confirm dimension will contain only the product.
