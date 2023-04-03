@@ -8,6 +8,9 @@
   - informatica gives error at the end of the excution that's the drawback of informatica
 
 - schema is a collection of objects stored in a place and active when required.
+- FACT TABLE is summerized data stored in a star schema under data mart
+- A data mart can consist of one start sechema or multiple start schema
+- dimension are descriptive in nature which is a part of star schema 
 
 Q. difference between mysql and oracle, bcz mysql is not good for production . so is oracle good for produciton . like client - server architecture ?
 
@@ -62,3 +65,5 @@ Q. difference between mysql and oracle, bcz mysql is not good for production . s
 ### DATABASE VS DATAWARE HOUSE
 ** data model refers to database, while dimension model is refer dataware house **
 - We build the dataware on the basis of INMON AND kIIMBALL theory (IMP)
+
+Q. 
