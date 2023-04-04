@@ -111,3 +111,12 @@ A mapping is nothing but a collection of source and target objects that are link
 
 
 ** Router transformation is active transformation **
+
+## ROUTER GROUPS
+- Input group (always one) default group capture rows that fail all group conditions
+- user defined output groups
+  - each group has one condition
+  - all group conditions are evaluated for each row
+  - one row can pass multiple conditions
+
+- unlinked group outputs are ignored
