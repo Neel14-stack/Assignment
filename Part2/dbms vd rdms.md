@@ -111,6 +111,9 @@ A mapping is nothing but a collection of source and target objects that are link
 
 
 ** Router transformation is active transformation **
+- active transformation row number is changed
+- passive transformation there is no change in record(row number)
+- meanwhile the number of columns can be changed in target
 
 ## ROUTER GROUPS
 - Input group (always one) default group capture rows that fail all group conditions
