@@ -98,3 +98,6 @@ A mapping is nothing but a collection of source and target objects that are link
   - test conditional statements and pass the results to target tables or other transformation
 - we dont touch the column, column is structural based
 - we dont use DML commands on source
+
+
+-  ** we use time dimension grain, to define the grainduality (in project) **
