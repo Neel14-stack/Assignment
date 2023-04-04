@@ -101,3 +101,5 @@ A mapping is nothing but a collection of source and target objects that are link
 
 
 -  ** we use time dimension grain, to define the grainduality (in project) **
+-  ** grainduality is based on redudancy factor **
+-  
