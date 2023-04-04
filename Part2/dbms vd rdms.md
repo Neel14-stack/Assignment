@@ -108,3 +108,6 @@ A mapping is nothing but a collection of source and target objects that are link
 - we can make a single source qualifier out of 2 different homogenous soucres, by using simple join
 - but we cant make a source qualififer for a homogenous source and a hetrogenous source, bcz the file format is different in both
 - so to connect different hetrogenous source we need to perform some action before making source qualifer
+
+
+** Router transformation is active transformation **
