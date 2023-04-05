@@ -7,6 +7,9 @@
   - informatics need a support of rdbms (oracle)
   - informatica gives error at the end of the excution that's the drawback of informatica
 
+![WhatsApp Image 2023-04-05 at 10 09 00 AM (1)](https://user-images.githubusercontent.com/54886608/229982736-fa11938b-6598-4e39-ad9f-185ea92df457.jpeg)
+
+
 - schema is a collection of objects stored in a place and active when required.
 - FACT TABLE is summerized data stored in a star schema under data mart
 - A data mart can consist of one start sechema or multiple start schema
@@ -27,6 +30,12 @@ Q. difference between mysql and oracle, bcz mysql is not good for production . s
 - "database neutal" - will communicatew with any database
 - powerful data transformation covert one application's data to another's format
 - metadata and lineage analysis (reports and metadata manager)
+
+![WhatsApp Image 2023-04-05 at 10 09 00 AM](https://user-images.githubusercontent.com/54886608/229982785-e7a1cd54-0c84-4ca1-b0a0-7c5870d66a19.jpeg)
+
+![WhatsApp Image 2023-04-05 at 10 08 59 AM (1)](https://user-images.githubusercontent.com/54886608/229982806-91eade7f-759b-4277-bc66-b263738847d9.jpeg)
+
+![WhatsApp Image 2023-04-05 at 10 08 59 AM](https://user-images.githubusercontent.com/54886608/229982819-1bd88995-7304-41ef-97a0-221c662ac2ca.jpeg)
 
 
 ** in dataware house we talk in dimenion table and facts table, while in db it all about tables **
@@ -123,3 +132,11 @@ A mapping is nothing but a collection of source and target objects that are link
   - one row can pass multiple conditions
 
 - unlinked group outputs are ignored
+
+
+### LOOKUP TRANSFORMATION
+- lookup transformaiton is used to comprasion of the data coming in
+- LOOPKUP TABLE -> it can be any of these source qualifier/ table/ files
+- lookup table lyi under the loopup tranformation
+- ![WhatsApp Image 2023-04-05 at 10 08 58 AM](https://user-images.githubusercontent.com/54886608/229982830-8a611d36-6e2a-47a5-909c-16fccff66f19.jpeg)
+
