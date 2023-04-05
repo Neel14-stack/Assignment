@@ -145,3 +145,5 @@ A mapping is nothing but a collection of source and target objects that are link
 - common column -> hetrogenous columns
 - in join we have only one conditon while in lookup we have multiple conditions to apply
 
+- *** ####TYPES OF LOOKUP ***
+- CONNECTED AND UNCONNECTED
