@@ -139,4 +139,5 @@ A mapping is nothing but a collection of source and target objects that are link
 - LOOPKUP TABLE -> it can be any of these source qualifier/ table/ files
 - lookup table lyi under the loopup tranformation
 - ![WhatsApp Image 2023-04-05 at 10 08 58 AM](https://user-images.githubusercontent.com/54886608/229982830-8a611d36-6e2a-47a5-909c-16fccff66f19.jpeg)
+- Type1 -> OLTP , Type2 -> Dataware house, Type3 -> ODS (snapshot) [SLOWLY CHANGING DIMENSION]
 
