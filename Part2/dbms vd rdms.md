@@ -147,3 +147,5 @@ A mapping is nothing but a collection of source and target objects that are link
 
 - *** ####TYPES OF LOOKUP ***
 - CONNECTED AND UNCONNECTED
+- UNCONNECTED LOOKUP - when we dont connect it in mapping, bcz its a burden to our server, it compares every record for example there is 1 million record it will compare every single one of them. so the performance issues.
+- Condition lookup -> we call it when we requrired based on "where" condition. for example we are performing some operationg in between mapping and there is a "where" condition, so we will call the lookup based on the "where" conditio
