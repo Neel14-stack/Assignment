@@ -143,4 +143,5 @@ A mapping is nothing but a collection of source and target objects that are link
 - LOOPKUP EXPLANATION - suppose we did some operation which result in 1000 record stored in target, the use of lookup is like that. next time when we pass the input into the lookup transformation and then there we have 2 thing the previous target as a lookup source and the input source. we will use lookup there to find the column things between the 2 sources (lookup source and input)
 - key column -> homogenouos columns
 - common column -> hetrogenous columns
+- in join we have only one conditon while in lookup we have multiple conditions to apply
 
