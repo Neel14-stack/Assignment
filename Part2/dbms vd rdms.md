@@ -141,4 +141,6 @@ A mapping is nothing but a collection of source and target objects that are link
 - ![WhatsApp Image 2023-04-05 at 10 08 58 AM](https://user-images.githubusercontent.com/54886608/229982830-8a611d36-6e2a-47a5-909c-16fccff66f19.jpeg)
 - Type1 -> OLTP , Type2 -> Dataware house, Type3 -> ODS (snapshot) [SLOWLY CHANGING DIMENSION]
 - LOOPKUP EXPLANATION - suppose we did some operation which result in 1000 record stored in target, the use of lookup is like that. next time when we pass the input into the lookup transformation and then there we have 2 thing the previous target as a lookup source and the input source. we will use lookup there to find the column things between the 2 sources (lookup source and input)
+- key column -> homogenouos columns
+- common column -> hetrogenous columns
 
