@@ -28,4 +28,4 @@ class MenuItem(Base):
 
 if __name__ == '__main__':
     engine = create_engine('sqlite:///restaurantmenu.db')
-    Base 
+    Base.metadata.create_all(engine)
