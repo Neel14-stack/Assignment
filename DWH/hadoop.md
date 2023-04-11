@@ -309,3 +309,15 @@ sqoop export --connect jdbc:mysql://localhost/databasename --username root --pas
     - partitioning is static as well as dynamic
   
   * in hive you can copy the schema f
+  
+  
+  ## EXPLANATION OF EVERYTHING
+  - datanode and name node is are nothigs it the machine which contain them, but to call it mahcine is not good. bcz a machine contain so many things but datanode and namenode are 2 of those things machine store
+  - after completion of mapper job the data is temporary store in local file system 
+  - mapper job is done in ram
+  - datanode and namenode are services running in a machine
+  - reducer reads the data from local disk and write the data in hdfs
+  - dfs -> distrubuted file system while we use local file system in case of mapper temporary storage
+  - there are 2 types of files are generated "partm" , "partr" but we saw only "partr" files which are reducer file. but if we want we can see the "partm" files as well
+  - cache memory are of 2 types -> volatile and presistent 
+  - 
