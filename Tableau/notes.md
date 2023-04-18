@@ -14,4 +14,11 @@
 - Live (real time changes will be showed in the dashboard)
 - Extract (changes made in table will not reflect in dashboard)
 
-* tableau have 6 types of datatype
+* tableau have 6 types of datatype *
+#### FIlter
+- extract filter
+- datasource filter
+  - datasource filter hold the all the records for example we have 500 central and 500 south 500 north 500 south, after applying filter on it, it will still give us 2000 records, while as extrat filter only gives us 500 records after applying central filter
+
+- .twb -> we cant modify we cant edit we can just read it
+- 
