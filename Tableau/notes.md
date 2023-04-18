@@ -13,3 +13,5 @@
 ** there are 2 types of connections in tableau**
 - Live (real time changes will be showed in the dashboard)
 - Extract (changes made in table will not reflect in dashboard)
+
+* tableau have 6 types of datatype
