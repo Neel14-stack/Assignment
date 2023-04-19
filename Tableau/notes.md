@@ -20,5 +20,18 @@
 - datasource filter
   - datasource filter hold the all the records for example we have 500 central and 500 south 500 north 500 south, after applying filter on it, it will still give us 2000 records, while as extrat filter only gives us 500 records after applying central filter
 
+- context fileter
+- dimension filter )
+  - (tring type filter, date range filter, number filter)
+    - general filter
+    - wildcard filter
+    - condition filter
+    - top filter
+- measure filter
+- tableau cal filter
+
 - .twb -> we cant modify we cant edit we can just read it
 - 
+
+
+### Filter
