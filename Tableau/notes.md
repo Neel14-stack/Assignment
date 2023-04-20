@@ -36,4 +36,8 @@
 - 
 
 
-### Filter
+### Filter option in date
+- continuous
+- discreate
+- aggreagte funciton
+- label
