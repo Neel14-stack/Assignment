@@ -20,6 +20,8 @@
 - datasource filter
   - datasource filter hold the all the records for example we have 500 central and 500 south 500 north 500 south, after applying filter on it, it will still give us 2000 records, while as extrat filter only gives us 500 records after applying central filter
 
+- in case of datasource it will store all the data but shows the only filtered data in the worksheet, but in case of extract filter it will store the only filtered data and showed the smae in the workshett thats why extract filter size is less as compared to datasource because it stores only the filtered data while datasource stores everything but shows only the filtered one
+
 - context fileter
 - dimension filter )
   - (tring type filter, date range filter, number filter)
