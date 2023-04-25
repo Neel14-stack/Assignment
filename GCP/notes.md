@@ -16,3 +16,5 @@
 
 -> we can have example of electricity bill as same as cloud, when will off it we dont have to pay same as when we release the services in cloud we dont have to pay
 ..
+
+![image](https://user-images.githubusercontent.com/54886608/234199701-5e2b7da9-1828-4b5f-a0a8-54fe06a68c03.png)
