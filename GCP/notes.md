@@ -18,3 +18,11 @@
 ..
 
 ![image](https://user-images.githubusercontent.com/54886608/234199701-5e2b7da9-1828-4b5f-a0a8-54fe06a68c03.png)
+
+- 37 regions (we work on the basis of regions)
+- 112 zones 
+
+
+### terms
+- hotstorage -> when the frequency is high
+- coldstorage -> when the frequency is low
