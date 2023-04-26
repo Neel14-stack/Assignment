@@ -29,3 +29,5 @@
 - backup of vm is image
 - backup of disk is snapshot
 - we can add custome meta data in snapshot then it will work as image
+- fenching in cloud is VPC
+- VPC provides us isolation, security of inside resoucers
