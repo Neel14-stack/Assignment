@@ -26,3 +26,5 @@
 ### terms
 - hotstorage -> when the frequency is high
 - coldstorage -> when the frequency is low
+- backup of vm is image
+- backup of disk is snapshot
