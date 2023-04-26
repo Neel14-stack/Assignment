@@ -41,3 +41,6 @@
 Q. how do we get a constant external ip address for our vm instance ?
 -  to get that, we have static ip adrress,
 -  go to external ip address, and reserve a ip address there
+
+
+-> whenever we attach a presistant disk to a instant its a harddisk and snapshot is nothing but a copy of presistant disk
