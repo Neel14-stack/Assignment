@@ -31,3 +31,5 @@
 - we can add custome meta data in snapshot then it will work as image
 - fenching in cloud is VPC
 - VPC provides us isolation, security of inside resoucers
+- we have smaller vpc or enivornment inside VPC
+- we have firewall to secure our VPC
