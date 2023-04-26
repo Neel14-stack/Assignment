@@ -33,3 +33,7 @@
 - VPC provides us isolation, security of inside resoucers
 - we have smaller vpc or enivornment inside VPC
 - we have firewall to secure our VPC
+
+
+## internal or external ip address
+ - whenever we stop our instances we lost our external ip but we still have our internal ip address, external ip address is accessable to the globe while internal ip addess is for working inside gcp
