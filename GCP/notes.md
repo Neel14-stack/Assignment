@@ -44,3 +44,5 @@ Q. how do we get a constant external ip address for our vm instance ?
 
 
 -> whenever we attach a presistant disk to a instant its a harddisk and snapshot is nothing but a copy of presistant disk
+-> recommended dont create image from running vm instance
+->>> disk -> image -> template (in which we used custome image as ours) -> vm instance
