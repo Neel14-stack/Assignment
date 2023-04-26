@@ -37,3 +37,7 @@
 
 ## internal or external ip address
  - whenever we stop our instances we lost our external ip but we still have our internal ip address, external ip address is accessable to the globe while internal ip addess is for working inside gcp
+ - by defualt all the ip address assigned to external ip is EPHENERAL, which is changeable..
+Q. how do we get a constant external ip address for our vm instance ?
+-  to get that, we have static ip adrress,
+-  go to external ip address, and reserve a ip address there
