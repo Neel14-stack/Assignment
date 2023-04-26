@@ -13,3 +13,8 @@ sudo service apache2 star
 
 
 link -> https://docs.google.com/document/d/1rpz8DE7asYbz2tGig6aSqMDIV9gFBfRSHsmFqQwVqdc/edit?usp=sharing
+
+#!/bin/bash
+apt update 
+apt -y install apache2
+echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
