@@ -22,6 +22,10 @@ echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
 
 gcloud config list project
 gcloud config configurations list
+
+-> to create and activate config
+gcloud config configurations create neel-config
+
 gcloud config configurations activate my-default-configuration
 gcloud config list
 gcloud config configurations describe my-second-configuration
