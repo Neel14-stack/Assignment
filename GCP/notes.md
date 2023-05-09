@@ -1,0 +1,51 @@
+## GCP
+
+#### requirements
+- storage
+- processing
+- network
+- power
+- heat dissipation
+
+-> 2 types of data (stream and batch data)
+
+. provision is the main issue in terms of cloud computing
+
+
+#### Cloud computing is a model for enabling ubiquitous, convenient, on demand network access to a ahsred pool of contifurable computing resources (e.g networks, servers, storage, applications and services ) that can be rapidly provisioned and realased with miniaml management effort or service provider intereaction. This cloud model is composed of fice essential characterisitcs three sercie models and four deployment models
+
+-> we can have example of electricity bill as same as cloud, when will off it we dont have to pay same as when we release the services in cloud we dont have to pay
+..
+
+![image](https://user-images.githubusercontent.com/54886608/234199701-5e2b7da9-1828-4b5f-a0a8-54fe06a68c03.png)
+
+- 37 regions (we work on the basis of regions)
+- 112 zones 
+
+
+### terms
+- hotstorage -> when the frequency is high
+- coldstorage -> when the frequency is low
+- backup of vm is image
+- backup of disk is snapshot
+- we can add custome meta data in snapshot then it will work as image
+- fenching in cloud is VPC
+- VPC provides us isolation, security of inside resoucers
+- we have smaller vpc or enivornment inside VPC
+- we have firewall to secure our VPC
+
+
+## internal or external ip address
+ - whenever we stop our instances we lost our external ip but we still have our internal ip address, external ip address is accessable to the globe while internal ip addess is for working inside gcp
+ - by defualt all the ip address assigned to external ip is EPHENERAL, which is changeable..
+Q. how do we get a constant external ip address for our vm instance ?
+-  to get that, we have static ip adrress,
+-  go to external ip address, and reserve a ip address there
+
+
+-> whenever we attach a presistant disk to a instant its a harddisk and snapshot is nothing but a copy of presistant disk
+-> recommended dont create image from running vm instance
+->>> disk -> image -> template (in which we used custome image as ours) -> vm instance
+
+
+## SRE -> SLA -> SLO -> SLI (IMP)
