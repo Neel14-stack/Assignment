@@ -1,0 +1,1 @@
+select is_male, avg(weight_pounds), count(*) from ddump group by is_male;
