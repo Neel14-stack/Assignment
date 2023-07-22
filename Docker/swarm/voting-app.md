@@ -29,3 +29,7 @@
     - one named volume, pointing to /var/lib/postgresql/data
     - on backend network
     - 1 replicas 
+
+- result
+    - dockersamples/examplevotingapp_result:before
+    - web app that shows result
