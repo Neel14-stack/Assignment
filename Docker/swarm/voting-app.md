@@ -10,7 +10,7 @@
     - on frontend network
     - 2+ replicas of this contianer
 
-- redies
+- redis
     - redis:3.2
     - key/value storage for incoming votes
     - no public ports
@@ -44,3 +44,14 @@ docker network create -d overlay frontend
 
 - vote
     docker serivce create --name vote -p 80:80 --network frontend --replica 2 dockersamples/examplevotingapp_vote:before
+
+
+- redis
+    docker serivce create --name redis --network frontend --replica 1 redis:3.2
+
+
+- worker
+    docker service create --name worker --network frontend --network backend dockersamples/examplevotingapp_worker
+
+- db
+    docker service create --name db --network backend --mount type=volume, source=dp-data, target=/var/lib/postgresql/data postgres:9.4
