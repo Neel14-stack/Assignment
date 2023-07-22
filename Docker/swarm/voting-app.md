@@ -62,3 +62,4 @@ docker network create -d overlay frontend
 
 
 - result
+    docker service create --name result --network backend -p 5001:80 dockersamples/examplevotingapp_result:before
