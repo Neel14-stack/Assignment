@@ -26,4 +26,6 @@
 
 - db
     - postgres:9.4
-    - one named volume
+    - one named volume, pointing to /var/lib/postgresql/data
+    - on backend network
+    - 1 replicas 
