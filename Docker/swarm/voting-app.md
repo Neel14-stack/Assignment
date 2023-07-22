@@ -33,6 +33,10 @@
 - result
     - dockersamples/examplevotingapp_result:before
     - web app that shows result
+    - runs on high port since just for admins 
+    - so run on a high port of your choosing (i choose 50001), container listens on 80
+    - on backend network
+    - 1 replicas
 
 
 
@@ -55,3 +59,6 @@ docker network create -d overlay frontend
 
 - db
     docker service create --name db --network backend --mount type=volume, source=dp-data, target=/var/lib/postgresql/data postgres:9.4
+
+
+- result
