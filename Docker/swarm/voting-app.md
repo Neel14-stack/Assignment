@@ -9,3 +9,11 @@
     - ideally published on TCP 80. container listens on 80
     - on frontend network
     - 2+ replicas of this contianer
+
+- redies
+    - redis:3.2
+    - key/value storage for incoming votes
+    - no public ports
+    - on frontend network
+    - 2 replicas
+    
