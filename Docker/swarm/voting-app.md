@@ -16,4 +16,14 @@
     - no public ports
     - on frontend network
     - 2 replicas
-    
+
+- worker
+    - dockersamples/examplevotingapp_worker
+    -backend processor of redis and storing results in postgres
+    - no public ports
+    - on frontend and backend networks
+    - 1 replica
+
+- db
+    - postgres:9.4
+    - one named volume
