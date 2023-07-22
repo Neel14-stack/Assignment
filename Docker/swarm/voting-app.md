@@ -47,11 +47,11 @@ docker network create -d overlay backend (overlay means, it relly on all nodes)
 docker network create -d overlay frontend
 
 - vote
-    docker serivce create --name vote -p 80:80 --network frontend --replica 2 dockersamples/examplevotingapp_vote:before
+    docker serivce create --name vote -p 80:80 --network frontend --replicas 2 dockersamples/examplevotingapp_vote:before
 
 
 - redis
-    docker serivce create --name redis --network frontend --replica 1 redis:3.2
+    docker serivce create --name redis --network frontend --replicas 1 redis:3.2
 
 
 - worker
