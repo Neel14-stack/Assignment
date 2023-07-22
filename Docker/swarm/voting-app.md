@@ -33,3 +33,14 @@
 - result
     - dockersamples/examplevotingapp_result:before
     - web app that shows result
+
+
+
+## COMMANDS 
+
+# create 2 network
+docker network create -d overlay backend (overlay means, it relly on all nodes)
+docker network create -d overlay frontend
+
+- vote
+    docker serivce create --name vote -p 80:80 --network frontend --replica 2 dockersamples/examplevotingapp_vote:before
