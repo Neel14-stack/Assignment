@@ -62,3 +62,12 @@
 - ##### scaing the replicas in my-apache
 
 ![Alt text](image-14.png)
+
+- kubectl logs deployment/my-apache
+
+![Alt text](image-15.png)
+
+- kubectl describe pod/pod-name
+
+![Alt text](image-16.png)
+
