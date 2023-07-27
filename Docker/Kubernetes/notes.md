@@ -40,3 +40,7 @@
 ![Alt text](image-7.png)
 
 #### delete pods and deploymnet
+
+- kubectl delete pod my-nginx
+
+![Alt text](image-8.png)
