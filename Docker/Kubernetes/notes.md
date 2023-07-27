@@ -71,3 +71,6 @@
 
 ![Alt text](image-16.png)
 
+- if we delete pod in deployement, it will try to restart another one of same type
+
+![Alt text](image-17.png)
