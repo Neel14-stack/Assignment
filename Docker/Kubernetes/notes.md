@@ -88,3 +88,10 @@
 
     ![Alt text](image-19.png)
 
+- LoadBalancer
+    - kubectl expose deployment/httpenv --port 8888 --name heeptenv-lb --type LoadBalancer
+
+    ![Alt text](image-20.png)
+
+    
+
