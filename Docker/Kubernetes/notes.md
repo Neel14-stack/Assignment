@@ -46,3 +46,8 @@
 ![Alt text](image-8.png)
 
 ![Alt text](image-9.png)
+
+- kubectl delete deployment my-ngninx
+
+![Alt text](image-10.png)
+
