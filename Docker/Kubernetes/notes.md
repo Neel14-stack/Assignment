@@ -14,3 +14,8 @@
 - Pods is a layer of abstraction, that wraps around one or more containers, and all the containers shares the same ip address and same deployment mechanism
 - unlike docker, we cnat create a container directly in kubernetes
 - we can create pods, and pods hold one or more contianers
+
+### run nginx
+- kubectl run my-nignx --image nginx
+
+![Alt text](image-2.png)
