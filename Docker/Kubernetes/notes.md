@@ -26,3 +26,5 @@
 - kubectl get pods
 ![Alt text](image-3.png)
 
+- kubectl get all
+![Alt text](image-4.png)
