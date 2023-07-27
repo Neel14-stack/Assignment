@@ -56,3 +56,5 @@
 - kubectl create deployment my-apache --image http
 
 ![Alt text](image-12.png)
+
+![Alt text](image-13.png)
