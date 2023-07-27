@@ -24,7 +24,19 @@
 ## ALL THE CMDS HERE ON
 
 - kubectl get pods
+
 ![Alt text](image-3.png)
 
 - kubectl get all
+
 ![Alt text](image-4.png)
+
+- kubectl crate deployment my-nginx --image nginx
+
+![Alt text](image-5.png)
+
+![Alt text](image-6.png)
+
+![Alt text](image-7.png)
+
+#### delete pods and deploymnet
