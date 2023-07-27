@@ -19,3 +19,10 @@
 - kubectl run my-nignx --image nginx
 
 ![Alt text](image-2.png)
+
+
+## ALL THE CMDS HERE ON
+
+- kubectl get pods
+![Alt text](image-3.png)
+
