@@ -74,3 +74,16 @@
 - if we delete pod in deployement, it will try to restart another one of same type
 
 ![Alt text](image-17.png)
+
+### Type of services
+- clusterip
+- nodeport
+- loadbalancer
+- externalname
+
+- NodePort
+    - kubectl expose deployment/httpenv --port 8888 --name httpenv-np --type NodePort
+
+    ![Alt text](image-18.png)
+
+    
