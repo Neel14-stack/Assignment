@@ -8,7 +8,7 @@
 ### to see the same thing in short version
 - kubectl version --short (its human readable form)
 
-
+![Alt text](image-1.png)
 
 ## Notes about PODS
 - Pods is a layer of abstraction, that wraps around one or more containers, and all the containers shares the same ip address and same deployment mechanism
