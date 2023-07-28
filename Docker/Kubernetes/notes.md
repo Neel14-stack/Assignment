@@ -96,3 +96,7 @@
     ![Alt text](image-21.png)
 
     ![Alt text](image-22.png)
+
+#### dry run
+
+- kubectl create deployment test --image nginx --dry-run -o yaml
