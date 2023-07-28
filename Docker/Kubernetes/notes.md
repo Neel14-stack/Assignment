@@ -104,3 +104,4 @@
 ![Alt text](image-23.png)
 
 - kubectl create job test --image nginx --dry-run
+
