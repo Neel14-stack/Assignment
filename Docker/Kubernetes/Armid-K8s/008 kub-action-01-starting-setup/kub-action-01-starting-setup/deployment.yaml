@@ -17,6 +17,7 @@ spec:
       containers: 
         - name: seocnd-node
           image: nilmr45/kub-first-app:2
+          imagePullPolicy: Always
           livenessProbe:
             httpGet:
               path: /
