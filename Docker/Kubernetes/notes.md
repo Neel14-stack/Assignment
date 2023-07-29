@@ -105,3 +105,6 @@
 
 - kubectl create job test --image nginx --dry-run
 
+### example of yaml file
+
+![Alt text](image-24.png)
