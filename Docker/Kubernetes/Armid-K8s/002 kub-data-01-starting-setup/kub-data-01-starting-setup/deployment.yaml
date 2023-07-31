@@ -14,4 +14,9 @@ spec:
     spec: 
       containers:
         - name: story
-          image: nilmr45/kub-data-demo
+          image: nilmr45/kub-data-demo:2
+          volumeMounts:
+            - mountPath: /app/story
+      volumes:
+        - name: story-volume
+          emptyDir: {}
