@@ -19,3 +19,5 @@ spec:
             - name: AUTH_ADDRESS
               # value: "10.105.151.92" # inside a pod we can use localhost to communicate with conatiners
               value: "auth-service.default"
+            - name: TASKS_FOLDER
+              value: tasks
