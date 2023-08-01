@@ -6,3 +6,7 @@ spec:
   selector:
     app: users
   type: LoadBalancer
+  ports: 
+    - protocol: TCP
+      port: 8080      # outside facing port
+      targetPort: 8080     # insdie of container where the request is forwarded
