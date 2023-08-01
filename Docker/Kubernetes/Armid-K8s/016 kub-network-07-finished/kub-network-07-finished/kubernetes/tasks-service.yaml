@@ -6,7 +6,7 @@ spec:
   selector:
     app: tasks
   type: LoadBalancer
-  ports: 
+  ports:
     - protocol: TCP
-      port: 8000      # outside facing port
-      targetPort: 8000     # insdie of container where the request is forwarded
+      port: 8000
+      targetPort: 8000
