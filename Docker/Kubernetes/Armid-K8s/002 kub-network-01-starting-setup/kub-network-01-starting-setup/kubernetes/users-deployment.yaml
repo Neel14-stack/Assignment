@@ -17,4 +17,5 @@ spec:
           image: nilmr45/kub-demo-user:latest
           env:
             - name: AUTH_ADDRESS
-              value: localhost # inside a pod we can use localhost to communicate with conatiners
+              # value: "10.105.151.92" # inside a pod we can use localhost to communicate with conatiners
+              value: "auth-service"
