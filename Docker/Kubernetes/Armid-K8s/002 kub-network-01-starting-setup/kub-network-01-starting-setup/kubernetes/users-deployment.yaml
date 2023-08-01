@@ -14,5 +14,10 @@ spec:
     spec:
       containers:
         - name: users
-          image: nilmr45/kub-demo-user
+          image: nilmr45/kub-demo-user:latest
+          env:
+            - name: AUTH_ADDRESS
+              value: localhost # inside a pod we can use localhost to communicate with conatiners
+        - name: auth
+          image: nilmr45/kub-demo-auth:latest
         
